@@ -102,6 +102,6 @@ pco2hyperbola  <-  function(a, b, m=0.065) {
 }
 
 pco2pareto  <-  function(a, b, m=0.065) {
-  ((-b * a^b)/m) ^ (1 / (1 - b))
+  (m / (-b * a^b)) ^ (1 / (b - 1))
 }
 
