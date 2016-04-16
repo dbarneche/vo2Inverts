@@ -1,0 +1,28 @@
+model {
+	# priors for fixed effects
+	lnA     ~  dnorm(0,1.0E-6)
+	lnB     ~  dnorm(0,1.0E-6)
+	tauMu   ~  dgamma(1.0E-3,1.0E-3)
+	varMu   <- 1/tauMu #variance, equivalent to inverse(tauMu)
+
+	# prior for random effects on lnA and lnB
+	for(i in 1:max(id)) {
+		r[i, 1:2] ~ dmnorm(zero[ ], tauR[ , ])
+	}
+	zero[1]  <-  0
+	zero[2]  <-  0
+	tauR[1:2, 1:2] ~ dwish(R[ , ], 3) #use 3 instead of 2 so correlations have uniform prior on correlations
+	
+	#R represents initial values for variance/covariance matrix
+	R[1, 1]  <-  1
+	R[1, 2]  <-  0
+	R[2, 1]  <-  0
+	R[2, 2]  <-  1
+	varR[1:2, 1:2]  <-  inverse(tauR[ , ])
+
+	# non-linear regression for rates
+	for(i in 1:length(boundedMassSpecificO2Vol)) {
+		boundedMassSpecificO2Vol[i]  ~   dnorm(mu[i], tauMu)
+		mu[i]   <-  (exp(lnA + r[id[i],1]) * o2sat[i]) / (exp(lnB + r[id[i],2]) + o2sat[i])
+	}
+}

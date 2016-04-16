@@ -1,40 +1,56 @@
-library(plyr)
-set.seed(1)
+library(R2jags)
 
 rm(list=ls())
-# load volume data and air saturation data
-vol  <-  read.csv('data/vol_2015_12_17.csv', header=TRUE, stringsAsFactors=FALSE)
-ast  <-  read.csv('data/airSat_2015_12_17.csv', header=TRUE, stringsAsFactors=FALSE)
+source('paths.R')
+source('database.R')    
 
-# make sure that the columns match in size and structure
-dim(vol) == dim(ast)
+#################################
+# MICHAELIS-MENTEN MODEL IN JAGS
+#################################
+set.seed(1)
+mmJags       <-  list('boundedMassSpecificO2Vol'=o2tab$boundedMassSpecificO2Vol, 'id'=o2tab$sppNum, 'o2sat'=o2tab$o2sat)
+mminits1     <-  list(lnA = 0.5,  lnB = 2, tauMu=1)
+mminits2     <-  list(lnA = 0,    lnB = 5, tauMu=3)
+mminits3     <-  list(lnA = -0.2, lnB = 3, tauMu=5)
+mmfit        <-  jags(data=mmJags, inits=list(mminits1, mminits2, mminits3), parameters.to.save=c('lnA', 'lnB', 'varMu', 'varR', as.character(sapply(1:2, function(x)paste0('r[', seq_len(max(o2tab$sppNum)), ',', x,']')))), model.file='michaelisMenten.bug', n.chains=3, n.iter=5e5, DIC=TRUE, n.thin=500)
+mmfit        <-  autojags(mmfit, n.iter=5e5, n.thin=500, n.update=100)
+mmjagsout    <-  mmfit$BUGSoutput$summary #jags output
 
-# make sure that NAs are placed correctly
-for(i in 1:ncol(vol)) {
-  cat(i, ': ', length(vol[!is.na(vol[,i]),i]) == length(ast[!is.na(ast[,i]),i]), '\n')
-}; rm(i)
-    
-# check quality of data
-#dim(data)
-#all(sapply(data, class) == 'numeric')
-#head(data)
+##############################
+# EXTRACT PARAMETERS FROM EACH
+# MCMC SAMPLE AND FIT ANOVAS
+# ALSO GET STANDARD ERRORS
+##############################
+mcmcMat              <-  mmfit$BUGSoutput$sims.matrix
+species              <-  o2tab$species[match(1:14, o2tab$sppNum)]
+shapes               <-  o2tab$shape[match(1:14, o2tab$sppNum)]
+status               <-  o2tab$status[match(1:14, o2tab$sppNum)]
+results              <-  data.frame(matrix(0, nrow(mcmcMat), 8))
+names(results)       <-  c('invasive', 'invasive_se', 'native', 'native_se', 'flat', 'flat_se', 'erect', 'erect_se')
+resultsErect         <-  data.frame(matrix(0, nrow(mcmcMat), 4))
+names(resultsErect)  <-  c('invasive', 'invasive_se', 'native', 'native_se')
 
-# volume data - standardise columns by their respective maxima, i.e. [0,1]
-for(i in 1:ncol(vol)) {
-  vol[, i]  <-  vol[,i]/max(vol[,i], na.rm=TRUE)
-  cat(range(vol[,i], na.rm=TRUE), '\n')
-}; rm(i)
-
-# create functions
-source('R/functions.R')
-pco2s  <-  vector(mode='list', length=ncol(vol))
-for(i in 1:ncol(vol)) {
-  pco2s[[i]]  <-  pco2(po2=ast[,i], vo2=vol[,i], index=i)
+for(i in 1:nrow(mcmcMat)) {
+	cpo2s       <-  exp(mcmcMat[i,'lnB'] + mcmcMat[i,paste0('r[', 1:14, ',2]')])
+	cpo2sErect  <-  cpo2s[shapes == 'erect']
+	statErect   <-  status[shapes == 'erect']
+	mod1        <-  lm(cpo2s ~ status - 1)
+	mod2        <-  lm(cpo2s ~ shapes - 1)
+	mod3        <-  lm(cpo2sErect ~ statErect - 1)
+	
+	results$invasive[i]          <-  coef(mod1)['statusinvasive']
+	results$invasive_se[i]       <-  coef(summary(mod1))['statusinvasive', 'Std. Error']
+	results$native[i]            <-  coef(mod1)['statusnative']
+	results$native_se[i]         <-  coef(summary(mod1))['statusnative', 'Std. Error']
+	results$erect[i]             <-  coef(mod2)['shapeserect']
+	results$erect_se[i]          <-  coef(summary(mod2))['shapeserect', 'Std. Error']
+	results$flat[i]              <-  coef(mod2)['shapesflat']
+	results$flat_se[i]           <-  coef(summary(mod2))['shapesflat', 'Std. Error']
+	resultsErect$invasive[i]     <-  coef(mod3)['statErectinvasive']
+	resultsErect$invasive_se[i]  <-  coef(summary(mod3))['statErectinvasive', 'Std. Error']
+	resultsErect$native[i]       <-  coef(mod3)['statErectnative']
+	resultsErect$native_se[i]    <-  coef(summary(mod3))['statErectnative', 'Std. Error']	
 }
-pco2s   <-  do.call(rbind.data.frame, pco2s)
-best    <-  ddply(pco2s, .(column), function(x) {
-	x  <-  x[complete.cases(x), ]
-	x[which.min(x$AICs),]
-})
-write.csv(pco2s, 'output/data/completeAICs.csv', row.names=FALSE)
-write.csv(best, 'output/data/bestAICs.csv', row.names=FALSE)
+
+rm(list=ls()[!(ls() %in% c('o2tab', 'mmfit', 'mmjagsout', 'results', 'resultsErect'))])
+save.image('output/RDatafiles/analyses.RData')
