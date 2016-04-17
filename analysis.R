@@ -2,7 +2,7 @@ library(R2jags)
 
 rm(list=ls())
 source('paths.R')
-source('database.R')    
+source('database.R')
 
 #################################
 # MICHAELIS-MENTEN MODEL IN JAGS

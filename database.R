@@ -1,7 +1,9 @@
+source('R/functions-analyses.R')
+
 # load volume data and air saturation data
-vol    <-  read.csv('data/vol_2015_12_17.csv', header=TRUE, stringsAsFactors=FALSE)
-ast    <-  read.csv('data/airSat_2015_12_17.csv', header=TRUE, stringsAsFactors=FALSE)
-spid   <-  read.csv('data/speciesID.csv', header=TRUE, stringsAsFactors=FALSE)
+vol    <-  readFile('data/vol_2015_12_17.csv')
+ast    <-  readFile('data/airSat_2015_12_17.csv')
+spid   <-  readFile('data/speciesID.csv')
 o2tab  <-  data.frame()
 for(i in 1:ncol(vol)) {
 	dat  <-  data.frame(species=spid$species[spid$column==i], dry_mass_g=spid$dry_mass_g[spid$column==i], status=tolower(spid$status[spid$column==i]), shape=tolower(spid$shape[spid$column==i]), column=i, o2volume=vol[!is.na(vol[,i]),i], o2sat=ast[!is.na(ast[,i]),i], 	stringsAsFactors=FALSE)
