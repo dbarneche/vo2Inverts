@@ -1,4 +1,5 @@
 ```{r, results='hide', warnings=FALSE, echo=FALSE, message=FALSE}
+load('../output/RDatafiles/analyses.RData')
 source('../R/functions-analyses.R')
 cleanbib()
 myRefs   <-  listBibs()
@@ -6,3 +7,20 @@ exporBibs(myRefs, erase=TRUE)
 ```
 
 **METHODS**  
+*Model*  
+Different from what is observed for most mammals where a clear critical $P\textrm{O}_\textrm{2}$ (hereafter $cP\textrm{O}_\textrm{2}$) can be estimated from segmented regression methods (**REF**), our $\dot{V}\textrm{O}_\textrm{2}$ data are curvilinear in nature, rendering any $cP\textrm{O}_\textrm{2}$ estimate subjective. Thus, here we employ a subjective though reproducible method to estimate a $cP\textrm{O}_\textrm{2}$ for each of our studied species. We fit a Michaelis-Menten function to our $\dot{V}\textrm{O}_\textrm{2}$ consumption data:  
+
+$$\dot{V}\textrm{O}_\textrm{2} = \frac{\dot{V}\textrm{O}_\textrm{2}_{max} \times P\textrm{O}_\textrm{2}}{cP\textrm{O}_\textrm{2} + P\textrm{O}_\textrm{2}}$$,  (1)
+
+where $\dot{V}\textrm{O}_\textrm{2}_{max}$ is an asymptotic $\dot{V}\textrm{O}_\textrm{2}$, and $cP\textrm{O}_\textrm{2}$ is the value of $P\textrm{O}_\textrm{2}$ where $\dot{V}\textrm{O}_\textrm{2}_{max} / 2$. Importantly, in order to achieve model convergence (see description of statistical methods below), we employ a two-step transformation to $\dot{V}\textrm{O}_\textrm{2}$. First, we transform $\dot{V}\textrm{O}_\textrm{2}$ to mass-specific $\dot{V}\textrm{O}_\textrm{2}$ (i.e. $\dot{V}\textrm{O}_\textrm{2} / M_i$, where $M_i$ is individual mass in mg) in order to reduce the discrepancy in $\dot{V}\textrm{O}_\textrm{2}$ between individuals. Second, for each individual, we standardise the mass-specific $\dot{V}\textrm{O}_\textrm{2}$ based on its maximum value, so all individuals present a relative mass-specific $\dot{V}\textrm{O}_\textrm{2}$ bounded between zero and one.  
+  
+*Statistical tests*  
+We fit eqn 1 above in Bayesian framework by calling *JAGS* version 4.2.0 from the R package *R2jags* version 0.05-6 `r myCite('r2jags')` in order to derive posterior distributions and associated 95\% credible intervals (CIs) for the fitted parameters, $\dot{V}\textrm{O}_\textrm{2}_{max}$ and $cP\textrm{O}_\textrm{2}$. We allow $\dot{V}\textrm{O}_\textrm{2}_{max}$ and $cP\textrm{O}_\textrm{2}$ to vary randomly among species. Random effects were assumed to be normally distributed, with means of 0. Fitted parameters were assigned priors that were vague (i.e. locally uniform over the region supported by the likelihood) `r myCite('kruschke2014book')`. The posterior distributions of model parameters were estimated using Markov chain Monte Carlo (MCMC) methods by constructing three chains of 500,000 steps each. Chains were thinned using a 500-step interval, so a total of 3,000 steps were retained to estimate posterior distributions (i.e. 3 $\times$ 500,000/500 = 10,000).  
+
+We use the species-specific estimates (*n* = `r length(unique(o2tab$species))`) for $cP\textrm{O}_\textrm{2}$ obtained in *JAGS* in order to fit three separate ANOVA's: one to test for differences in $cP\textrm{O}_\textrm{2}$ between species status (native and invasive), a second to test for differences in $cP\textrm{O}_\textrm{2}$ between species shape (erect and flat), and a third one to test for differences in $cP\textrm{O}_\textrm{2}$ between *erect* species status (native and invasive). Ideally, a more fair test would be represented by a two-way ANOVA with a formal statistical interaction between status and shape. However, given that we only have `r length(unique(o2tab$species))` species in our dataset, doing so would most likely overfit the data (i.e. too many parameters to be estimated from few observations), so our approach is conservative. We fit these ANOVA's for each one of the 3,000 MCMC parameter estimates in order to obtain a 'full posterior distribution' of differences in $cP\textrm{O}_\textrm{2}$ between categories (status or shape). Statistical significance is judged by the lack of overlap between such distributions.  
+  
+**RESULTS**  
+Our results indicate that native species present, on average, a $cP\textrm{O}_\textrm{2}$ `r round(results$native / results$invasive, 1)` higher if compared to 
+
+**FIGURE LEGENDS**  
+  
