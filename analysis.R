@@ -52,5 +52,13 @@ for(i in 1:nrow(mcmcMat)) {
 	resultsErect$native_se[i]    <-  coef(summary(mod3))['statErectnative', 'Std. Error']	
 }
 
-rm(list=ls()[!(ls() %in% c('o2tab', 'mmfit', 'mmjagsout', 'results', 'resultsErect'))])
+##############################
+# SUMMARY AVERAGES FOR FLAT
+# SPECIES
+##############################
+cpo2sFlat            <-  exp(mmjagsout['lnB', 'mean'] + mmjagsout[paste0('r[', 1:14, ',2]'), 'mean'])
+avCpo2FlatNative     <-  mean(cpo2sFlat[shapes == 'flat' & status == 'native'])
+avCpo2FlatInvasive   <-  mean(cpo2sFlat[shapes == 'flat' & status == 'invasive'])
+	
+rm(list=ls()[!(ls() %in% c('o2tab', 'mmfit', 'mmjagsout', 'results', 'resultsErect', 'avCpo2FlatNative', 'avCpo2FlatInvasive'))])
 save.image('output/RDatafiles/analyses.RData')
