@@ -1,0 +1,1531 @@
+Spot,Sample,Day,Location,LocationNum,%AS,Flow (m*s-1)
+1,1,1,Blairgowrie,3,35.99,0.03
+1,2,1,Blairgowrie,3,62.43,0.04
+1,3,1,Blairgowrie,3,83.17,0.04
+1,4,1,Blairgowrie,3,37.21,
+1,5,1,Blairgowrie,3,82.95,
+1,6,1,Blairgowrie,3,84.23,
+2,1,1,Blairgowrie,3,1.85,0.02
+2,2,1,Blairgowrie,3,53.47,0.02
+2,3,1,Blairgowrie,3,75.58,0.04
+2,4,1,Blairgowrie,3,48.01,
+2,5,1,Blairgowrie,3,79.14,
+2,6,1,Blairgowrie,3,99.29,
+3,1,1,Blairgowrie,3,14.73,0.00
+3,2,1,Blairgowrie,3,12.43,0.03
+3,3,1,Blairgowrie,3,92.33,0.02
+3,4,1,Blairgowrie,3,58.50,
+3,5,1,Blairgowrie,3,66.51,
+3,6,1,Blairgowrie,3,87.54,
+4,1,1,Blairgowrie,3,58.50,0.02
+4,2,1,Blairgowrie,3,91.82,0.02
+4,3,1,Blairgowrie,3,98.70,0.02
+4,4,1,Blairgowrie,3,86.34,
+4,5,1,Blairgowrie,3,78.53,
+4,6,1,Blairgowrie,3,79.19,
+5,1,1,Blairgowrie,3,30.54,0.01
+5,2,1,Blairgowrie,3,29.00,0.02
+5,3,1,Blairgowrie,3,73.32,0.05
+5,4,1,Blairgowrie,3,5.83,
+5,5,1,Blairgowrie,3,56.50,
+5,6,1,Blairgowrie,3,86.49,
+6,1,1,Blairgowrie,3,2.21,0.02
+6,2,1,Blairgowrie,3,0.41,0.01
+6,3,1,Blairgowrie,3,12.05,0.04
+6,4,1,Blairgowrie,3,76.30,
+6,5,1,Blairgowrie,3,46.80,
+6,6,1,Blairgowrie,3,78.00,
+7,1,1,Blairgowrie,3,60.62,0.01
+7,2,1,Blairgowrie,3,85.76,0.02
+7,3,1,Blairgowrie,3,100.76,0.04
+7,4,1,Blairgowrie,3,73.23,
+7,5,1,Blairgowrie,3,96.83,
+7,6,1,Blairgowrie,3,97.22,
+8,1,1,Blairgowrie,3,85.25,0.02
+8,2,1,Blairgowrie,3,99.68,0.04
+8,3,1,Blairgowrie,3,93.22,0.01
+8,4,1,Blairgowrie,3,26.94,
+8,5,1,Blairgowrie,3,70.31,
+8,6,1,Blairgowrie,3,98.20,
+9,1,1,Blairgowrie,3,95.65,0.05
+9,2,1,Blairgowrie,3,97.29,0.06
+9,3,1,Blairgowrie,3,94.12,0.07
+9,4,1,Blairgowrie,3,5.53,
+9,5,1,Blairgowrie,3,19.97,
+9,6,1,Blairgowrie,3,26.18,
+10,1,1,Blairgowrie,3,104.30,0.05
+10,2,1,Blairgowrie,3,101.96,0.04
+10,3,1,Blairgowrie,3,97.21,0.08
+10,4,1,Blairgowrie,3,97.48,
+10,5,1,Blairgowrie,3,104.38,
+10,6,1,Blairgowrie,3,104.60,
+11,1,1,Blairgowrie,3,96.30,0.03
+11,2,1,Blairgowrie,3,20.90,0.06
+11,3,1,Blairgowrie,3,30.85,0.03
+11,4,1,Blairgowrie,3,0.32,
+11,5,1,Blairgowrie,3,7.56,
+11,6,1,Blairgowrie,3,94.58,
+12,1,1,Blairgowrie,3,98.46,0.05
+12,2,1,Blairgowrie,3,87.26,0.04
+12,3,1,Blairgowrie,3,84.32,0.05
+12,4,1,Blairgowrie,3,3.00,
+12,5,1,Blairgowrie,3,35.17,
+12,6,1,Blairgowrie,3,92.69,
+1,1,2,Blairgowrie,3,103.17,0.02
+1,2,2,Blairgowrie,3,76.20,0.01
+1,3,2,Blairgowrie,3,19.75,0.02
+1,4,2,Blairgowrie,3,118.55,
+1,5,2,Blairgowrie,3,102.43,
+1,6,2,Blairgowrie,3,97.36,
+2,1,2,Blairgowrie,3,99.16,0.02
+2,2,2,Blairgowrie,3,104.50,0.01
+2,3,2,Blairgowrie,3,77.81,0.02
+2,4,2,Blairgowrie,3,93.31,
+2,5,2,Blairgowrie,3,96.18,
+2,6,2,Blairgowrie,3,98.30,
+3,1,2,Blairgowrie,3,96.13,0.01
+3,2,2,Blairgowrie,3,98.85,0.32
+3,3,2,Blairgowrie,3,99.05,0.02
+3,4,2,Blairgowrie,3,101.18,
+3,5,2,Blairgowrie,3,102.94,
+3,6,2,Blairgowrie,3,96.63,
+4,1,2,Blairgowrie,3,103.47,0.06
+4,2,2,Blairgowrie,3,102.86,0.03
+4,3,2,Blairgowrie,3,93.45,0.05
+4,4,2,Blairgowrie,3,93.24,
+4,5,2,Blairgowrie,3,89.52,
+4,6,2,Blairgowrie,3,94.33,
+5,1,2,Blairgowrie,3,95.10,0.04
+5,2,2,Blairgowrie,3,97.05,0.03
+5,3,2,Blairgowrie,3,92.36,0.05
+5,4,2,Blairgowrie,3,93.42,
+5,5,2,Blairgowrie,3,90.29,
+5,6,2,Blairgowrie,3,76.12,
+6,1,2,Blairgowrie,3,94.11,0.03
+6,2,2,Blairgowrie,3,94.14,0.05
+6,3,2,Blairgowrie,3,90.61,0.03
+6,4,2,Blairgowrie,3,93.61,
+6,5,2,Blairgowrie,3,90.12,
+6,6,2,Blairgowrie,3,60.72,
+7,1,2,Blairgowrie,3,94.97,0.13
+7,2,2,Blairgowrie,3,98.71,0.11
+7,3,2,Blairgowrie,3,96.85,0.13
+7,4,2,Blairgowrie,3,96.58,
+7,5,2,Blairgowrie,3,94.73,
+7,6,2,Blairgowrie,3,95.58,
+8,1,2,Blairgowrie,3,98.16,0.07
+8,2,2,Blairgowrie,3,96.47,0.04
+8,3,2,Blairgowrie,3,95.42,0.07
+8,4,2,Blairgowrie,3,12.25,
+8,5,2,Blairgowrie,3,95.37,
+8,6,2,Blairgowrie,3,95.42,
+9,1,2,Blairgowrie,3,8.56,0.03
+9,2,2,Blairgowrie,3,84.43,0.03
+9,3,2,Blairgowrie,3,91.55,0.04
+9,4,2,Blairgowrie,3,95.54,
+9,5,2,Blairgowrie,3,91.38,
+9,6,2,Blairgowrie,3,102.45,
+10,1,2,Blairgowrie,3,13.07,0.03
+10,2,2,Blairgowrie,3,94.34,0.01
+10,3,2,Blairgowrie,3,93.67,0.05
+10,4,2,Blairgowrie,3,91.06,
+10,5,2,Blairgowrie,3,95.08,
+10,6,2,Blairgowrie,3,94.07,
+11,1,2,Blairgowrie,3,93.54,0.04
+11,2,2,Blairgowrie,3,85.57,0.05
+11,3,2,Blairgowrie,3,96.88,0.06
+11,4,2,Blairgowrie,3,96.39,
+11,5,2,Blairgowrie,3,97.30,
+11,6,2,Blairgowrie,3,92.61,
+12,1,2,Blairgowrie,3,91.57,0.04
+12,2,2,Blairgowrie,3,93.60,0.05
+12,3,2,Blairgowrie,3,92.45,0.06
+12,4,2,Blairgowrie,3,91.74,
+12,5,2,Blairgowrie,3,94.99,
+12,6,2,Blairgowrie,3,95.92,
+1,1,3,Blairgowrie,3,96.05,0.04
+1,2,3,Blairgowrie,3,92.05,0.05
+1,3,3,Blairgowrie,3,68.54,0.03
+1,4,3,Blairgowrie,3,100.37,
+1,5,3,Blairgowrie,3,89.95,
+1,6,3,Blairgowrie,3,98.89,
+2,1,3,Blairgowrie,3,98.15,0.03
+2,2,3,Blairgowrie,3,98.22,0.04
+2,3,3,Blairgowrie,3,99.03,0.05
+2,4,3,Blairgowrie,3,30.52,
+2,5,3,Blairgowrie,3,99.61,
+2,6,3,Blairgowrie,3,85.38,
+3,1,3,Blairgowrie,3,96.86,0.02
+3,2,3,Blairgowrie,3,95.48,0.02
+3,3,3,Blairgowrie,3,100.56,0.03
+3,4,3,Blairgowrie,3,1.54,
+3,5,3,Blairgowrie,3,75.35,
+3,6,3,Blairgowrie,3,51.72,
+4,1,3,Blairgowrie,3,89.45,0.03
+4,2,3,Blairgowrie,3,83.37,0.03
+4,3,3,Blairgowrie,3,99.03,0.02
+4,4,3,Blairgowrie,3,98.62,
+4,5,3,Blairgowrie,3,99.19,
+4,6,3,Blairgowrie,3,96.83,
+5,1,3,Blairgowrie,3,94.91,0.02
+5,2,3,Blairgowrie,3,92.77,0.01
+5,3,3,Blairgowrie,3,98.66,0.02
+5,4,3,Blairgowrie,3,98.52,
+5,5,3,Blairgowrie,3,51.54,
+5,6,3,Blairgowrie,3,96.47,
+6,1,3,Blairgowrie,3,92.31,0.01
+6,2,3,Blairgowrie,3,89.79,0.01
+6,3,3,Blairgowrie,3,97.73,0.02
+6,4,3,Blairgowrie,3,1.42,
+6,5,3,Blairgowrie,3,97.68,
+6,6,3,Blairgowrie,3,40.84,
+7,1,3,Blairgowrie,3,97.90,0.04
+7,2,3,Blairgowrie,3,99.37,0.03
+7,3,3,Blairgowrie,3,99.28,0.03
+7,4,3,Blairgowrie,3,91.06,
+7,5,3,Blairgowrie,3,76.19,
+7,6,3,Blairgowrie,3,98.89,
+8,1,3,Blairgowrie,3,93.92,0.02
+8,2,3,Blairgowrie,3,95.08,0.03
+8,3,3,Blairgowrie,3,94.59,0.05
+8,4,3,Blairgowrie,3,98.93,
+8,5,3,Blairgowrie,3,99.58,
+8,6,3,Blairgowrie,3,99.87,
+9,1,3,Blairgowrie,3,101.68,0.03
+9,2,3,Blairgowrie,3,101.38,0.03
+9,3,3,Blairgowrie,3,98.67,0.03
+9,4,3,Blairgowrie,3,84.80,
+9,5,3,Blairgowrie,3,92.42,
+9,6,3,Blairgowrie,3,97.82,
+10,1,3,Blairgowrie,3,101.58,0.03
+10,2,3,Blairgowrie,3,102.81,0.03
+10,3,3,Blairgowrie,3,67.52,0.05
+10,4,3,Blairgowrie,3,93.71,
+10,5,3,Blairgowrie,3,79.53,
+10,6,3,Blairgowrie,3,96.11,
+11,1,3,Blairgowrie,3,102.07,0.05
+11,2,3,Blairgowrie,3,100.05,0.05
+11,3,3,Blairgowrie,3,84.44,0.05
+11,4,3,Blairgowrie,3,84.36,
+11,5,3,Blairgowrie,3,68.52,
+11,6,3,Blairgowrie,3,93.59,
+12,1,3,Blairgowrie,3,91.81,0.06
+12,2,3,Blairgowrie,3,93.82,0.05
+12,3,3,Blairgowrie,3,71.99,0.05
+12,4,3,Blairgowrie,3,97.10,
+12,5,3,Blairgowrie,3,98.16,
+12,6,3,Blairgowrie,3,98.63,
+1,1,4,Blairgowrie,3,90.46,0.03
+1,2,4,Blairgowrie,3,85.39,0.02
+1,3,4,Blairgowrie,3,61.06,0.04
+1,4,4,Blairgowrie,3,95.53,
+1,5,4,Blairgowrie,3,70.44,
+1,6,4,Blairgowrie,3,98.77,
+2,1,4,Blairgowrie,3,90.85,0.03
+2,2,4,Blairgowrie,3,93.58,0.02
+2,3,4,Blairgowrie,3,52.13,0.04
+2,4,4,Blairgowrie,3,67.75,
+2,5,4,Blairgowrie,3,75.49,
+2,6,4,Blairgowrie,3,96.65,
+3,1,4,Blairgowrie,3,85.12,0.02
+3,2,4,Blairgowrie,3,87.57,0.02
+3,3,4,Blairgowrie,3,21.32,0.02
+3,4,4,Blairgowrie,3,94.64,
+3,5,4,Blairgowrie,3,98.93,
+3,6,4,Blairgowrie,3,97.89,
+4,1,4,Blairgowrie,3,92.33,0.01
+4,2,4,Blairgowrie,3,88.94,0.02
+4,3,4,Blairgowrie,3,96.60,0.02
+4,4,4,Blairgowrie,3,94.76,
+4,5,4,Blairgowrie,3,99.32,
+4,6,4,Blairgowrie,3,99.31,
+5,1,4,Blairgowrie,3,99.10,0.01
+5,2,4,Blairgowrie,3,100.27,0.02
+5,3,4,Blairgowrie,3,93.89,0.02
+5,4,4,Blairgowrie,3,98.59,
+5,5,4,Blairgowrie,3,88.74,
+5,6,4,Blairgowrie,3,100.05,
+6,1,4,Blairgowrie,3,100.13,0.01
+6,2,4,Blairgowrie,3,99.16,0.01
+6,3,4,Blairgowrie,3,88.47,0.02
+6,4,4,Blairgowrie,3,95.76,
+6,5,4,Blairgowrie,3,92.65,
+6,6,4,Blairgowrie,3,83.43,
+7,1,4,Blairgowrie,3,89.42,0.05
+7,2,4,Blairgowrie,3,94.89,0.05
+7,3,4,Blairgowrie,3,63.16,0.05
+7,4,4,Blairgowrie,3,82.70,
+7,5,4,Blairgowrie,3,91.63,
+7,6,4,Blairgowrie,3,96.67,
+8,1,4,Blairgowrie,3,89.39,0.01
+8,2,4,Blairgowrie,3,90.22,0.03
+8,3,4,Blairgowrie,3,63.16,0.03
+8,4,4,Blairgowrie,3,80.78,
+8,5,4,Blairgowrie,3,92.32,
+8,6,4,Blairgowrie,3,96.37,
+9,1,4,Blairgowrie,3,97.21,0.03
+9,2,4,Blairgowrie,3,96.85,0.04
+9,3,4,Blairgowrie,3,98.96,0.03
+9,4,4,Blairgowrie,3,95.03,
+9,5,4,Blairgowrie,3,99.77,
+9,6,4,Blairgowrie,3,95.74,
+10,1,4,Blairgowrie,3,95.16,0.04
+10,2,4,Blairgowrie,3,95.28,0.05
+10,3,4,Blairgowrie,3,53.22,0.05
+10,4,4,Blairgowrie,3,91.66,
+10,5,4,Blairgowrie,3,97.30,
+10,6,4,Blairgowrie,3,99.22,
+11,1,4,Blairgowrie,3,98.16,0.05
+11,2,4,Blairgowrie,3,97.95,0.04
+11,3,4,Blairgowrie,3,96.94,0.03
+11,4,4,Blairgowrie,3,98.02,
+11,5,4,Blairgowrie,3,98.46,
+11,6,4,Blairgowrie,3,95.05,
+12,1,4,Blairgowrie,3,90.05,0.03
+12,2,4,Blairgowrie,3,87.33,0.03
+12,3,4,Blairgowrie,3,90.70,0.05
+12,4,4,Blairgowrie,3,98.22,
+12,5,4,Blairgowrie,3,91.76,
+12,6,4,Blairgowrie,3,90.79,
+1,1,5,Blairgowrie,3,97.92,0.03
+1,2,5,Blairgowrie,3,99.66,0.01
+1,3,5,Blairgowrie,3,58.15,0.03
+1,4,5,Blairgowrie,3,8.70,
+1,5,5,Blairgowrie,3,99.15,
+1,6,5,Blairgowrie,3,64.88,
+2,1,5,Blairgowrie,3,97.89,0.03
+2,2,5,Blairgowrie,3,97.19,0.03
+2,3,5,Blairgowrie,3,57.56,0.03
+2,4,5,Blairgowrie,3,94.37,
+2,5,5,Blairgowrie,3,57.21,
+2,6,5,Blairgowrie,3,98.66,
+3,1,5,Blairgowrie,3,95.95,0.03
+3,2,5,Blairgowrie,3,97.12,0.03
+3,3,5,Blairgowrie,3,72.63,0.03
+3,4,5,Blairgowrie,3,100.74,
+3,5,5,Blairgowrie,3,100.72,
+3,6,5,Blairgowrie,3,100.74,
+4,1,5,Blairgowrie,3,96.42,0.03
+4,2,5,Blairgowrie,3,96.77,0.02
+4,3,5,Blairgowrie,3,96.70,0.03
+4,4,5,Blairgowrie,3,97.33,
+4,5,5,Blairgowrie,3,71.01,
+4,6,5,Blairgowrie,3,97.64,
+5,1,5,Blairgowrie,3,87.11,0.03
+5,2,5,Blairgowrie,3,93.42,0.04
+5,3,5,Blairgowrie,3,103.25,0.03
+5,4,5,Blairgowrie,3,98.75,
+5,5,5,Blairgowrie,3,101.66,
+5,6,5,Blairgowrie,3,101.61,
+6,1,5,Blairgowrie,3,86.63,0.01
+6,2,5,Blairgowrie,3,98.50,0.03
+6,3,5,Blairgowrie,3,101.51,0.03
+6,4,5,Blairgowrie,3,3.16,
+6,5,5,Blairgowrie,3,99.55,
+6,6,5,Blairgowrie,3,95.86,
+7,1,5,Blairgowrie,3,87.81,0.03
+7,2,5,Blairgowrie,3,95.14,0.02
+7,3,5,Blairgowrie,3,101.19,0.03
+7,4,5,Blairgowrie,3,89.97,
+7,5,5,Blairgowrie,3,100.72,
+7,6,5,Blairgowrie,3,99.47,
+8,1,5,Blairgowrie,3,95.96,0.04
+8,2,5,Blairgowrie,3,98.96,0.03
+8,3,5,Blairgowrie,3,98.71,0.04
+8,4,5,Blairgowrie,3,98.79,
+8,5,5,Blairgowrie,3,97.11,
+8,6,5,Blairgowrie,3,96.84,
+9,1,5,Blairgowrie,3,94.52,0.01
+9,2,5,Blairgowrie,3,93.59,0.02
+9,3,5,Blairgowrie,3,60.16,0.02
+9,4,5,Blairgowrie,3,63.14,
+9,5,5,Blairgowrie,3,93.56,
+9,6,5,Blairgowrie,3,81.61,
+10,1,5,Blairgowrie,3,98.26,0.05
+10,2,5,Blairgowrie,3,100.06,0.04
+10,3,5,Blairgowrie,3,68.61,0.05
+10,4,5,Blairgowrie,3,87.29,
+10,5,5,Blairgowrie,3,55.43,
+10,6,5,Blairgowrie,3,97.54,
+11,1,5,Blairgowrie,3,99.86,0.05
+11,2,5,Blairgowrie,3,98.63,0.05
+11,3,5,Blairgowrie,3,93.50,0.05
+11,4,5,Blairgowrie,3,97.81,
+11,5,5,Blairgowrie,3,99.87,
+11,6,5,Blairgowrie,3,98.39,
+12,1,5,Blairgowrie,3,97.48,0.05
+12,2,5,Blairgowrie,3,99.08,0.05
+12,3,5,Blairgowrie,3,97.28,0.06
+12,4,5,Blairgowrie,3,95.86,
+12,5,5,Blairgowrie,3,91.89,
+12,6,5,Blairgowrie,3,97.13,
+1,1,1,Brighton,2,72.35,0.01
+1,2,1,Brighton,2,47.58,0.01
+1,3,1,Brighton,2,90.74,0.02
+1,4,1,Brighton,2,0.00,
+1,5,1,Brighton,2,89.31,
+1,6,1,Brighton,2,71.63,
+2,1,1,Brighton,2,81.71,0.01
+2,2,1,Brighton,2,58.88,0.01
+2,3,1,Brighton,2,85.63,0.00
+2,4,1,Brighton,2,65.37,
+2,5,1,Brighton,2,82.00,
+2,6,1,Brighton,2,82.01,
+3,1,1,Brighton,2,95.58,0.00
+3,2,1,Brighton,2,77.35,0.01
+3,3,1,Brighton,2,96.72,0.00
+3,4,1,Brighton,2,91.38,
+3,5,1,Brighton,2,86.84,
+3,6,1,Brighton,2,87.88,
+4,1,1,Brighton,2,91.64,0.01
+4,2,1,Brighton,2,90.52,0.02
+4,3,1,Brighton,2,91.72,0.01
+4,4,1,Brighton,2,78.31,
+4,5,1,Brighton,2,82.87,
+4,6,1,Brighton,2,91.99,
+5,1,1,Brighton,2,99.31,0.00
+5,2,1,Brighton,2,99.59,0.00
+5,3,1,Brighton,2,97.59,0.01
+5,4,1,Brighton,2,63.68,
+5,5,1,Brighton,2,58.45,
+5,6,1,Brighton,2,96.44,
+6,1,1,Brighton,2,63.16,0.01
+6,2,1,Brighton,2,76.12,0.01
+6,3,1,Brighton,2,98.48,0.02
+6,4,1,Brighton,2,98.62,
+6,5,1,Brighton,2,100.36,
+6,6,1,Brighton,2,96.83,
+7,1,1,Brighton,2,54.33,0.00
+7,2,1,Brighton,2,100.15,0.01
+7,3,1,Brighton,2,94.88,0.01
+7,4,1,Brighton,2,96.65,
+7,5,1,Brighton,2,87.90,
+7,6,1,Brighton,2,82.38,
+8,1,1,Brighton,2,0.36,0.02
+8,2,1,Brighton,2,35.66,0.04
+8,3,1,Brighton,2,23.93,0.05
+8,4,1,Brighton,2,84.91,
+8,5,1,Brighton,2,82.87,
+8,6,1,Brighton,2,100.05,
+9,1,1,Brighton,2,63.79,0.01
+9,2,1,Brighton,2,87.97,0.01
+9,3,1,Brighton,2,94.35,0.32
+9,4,1,Brighton,2,79.58,
+9,5,1,Brighton,2,97.80,
+9,6,1,Brighton,2,83.64,
+10,1,1,Brighton,2,59.10,0.03
+10,2,1,Brighton,2,90.78,0.00
+10,3,1,Brighton,2,90.31,0.49
+10,4,1,Brighton,2,94.47,
+10,5,1,Brighton,2,82.29,
+10,6,1,Brighton,2,95.19,
+11,1,1,Brighton,2,97.44,0.00
+11,2,1,Brighton,2,94.62,0.01
+11,3,1,Brighton,2,95.31,0.01
+11,4,1,Brighton,2,84.68,
+11,5,1,Brighton,2,97.40,
+11,6,1,Brighton,2,67.70,
+12,1,1,Brighton,2,52.77,0.01
+12,2,1,Brighton,2,25.62,0.01
+12,3,1,Brighton,2,74.87,0.01
+12,4,1,Brighton,2,64.89,
+12,5,1,Brighton,2,83.07,
+12,6,1,Brighton,2,71.25,
+1,1,2,Brighton,2,99.79,0.00
+1,2,2,Brighton,2,94.80,0.01
+1,3,2,Brighton,2,96.22,0.00
+1,4,2,Brighton,2,100.87,
+1,5,2,Brighton,2,93.63,
+1,6,2,Brighton,2,93.56,
+2,1,2,Brighton,2,94.79,0.00
+2,2,2,Brighton,2,92.30,0.00
+2,3,2,Brighton,2,95.54,0.01
+2,4,2,Brighton,2,94.32,
+2,5,2,Brighton,2,92.87,
+2,6,2,Brighton,2,99.90,
+3,1,2,Brighton,2,94.97,0.01
+3,2,2,Brighton,2,111.66,0.01
+3,3,2,Brighton,2,93.45,0.01
+3,4,2,Brighton,2,96.84,
+3,5,2,Brighton,2,103.07,
+3,6,2,Brighton,2,99.95,
+4,1,2,Brighton,2,95.32,0.01
+4,2,2,Brighton,2,95.42,0.00
+4,3,2,Brighton,2,95.29,0.01
+4,4,2,Brighton,2,94.32,
+4,5,2,Brighton,2,92.74,
+4,6,2,Brighton,2,99.90,
+5,1,2,Brighton,2,100.85,0.01
+5,2,2,Brighton,2,95.71,0.01
+5,3,2,Brighton,2,98.68,0.01
+5,4,2,Brighton,2,30.24,
+5,5,2,Brighton,2,94.91,
+5,6,2,Brighton,2,100.67,
+6,1,2,Brighton,2,98.18,0.02
+6,2,2,Brighton,2,70.81,0.02
+6,3,2,Brighton,2,93.27,0.01
+6,4,2,Brighton,2,94.11,
+6,5,2,Brighton,2,92.78,
+6,6,2,Brighton,2,99.65,
+7,1,2,Brighton,2,3.59,0.02
+7,2,2,Brighton,2,54.83,0.02
+7,3,2,Brighton,2,96.37,0.01
+7,4,2,Brighton,2,47.05,
+7,5,2,Brighton,2,91.83,
+7,6,2,Brighton,2,96.97,
+8,1,2,Brighton,2,11.89,0.00
+8,2,2,Brighton,2,90.36,0.00
+8,3,2,Brighton,2,88.58,0.01
+8,4,2,Brighton,2,19.29,
+8,5,2,Brighton,2,74.40,
+8,6,2,Brighton,2,76.13,
+9,1,2,Brighton,2,97.53,0.01
+9,2,2,Brighton,2,72.42,0.03
+9,3,2,Brighton,2,89.71,0.03
+9,4,2,Brighton,2,49.63,
+9,5,2,Brighton,2,68.56,
+9,6,2,Brighton,2,63.63,
+10,1,2,Brighton,2,49.06,0.00
+10,2,2,Brighton,2,92.89,0.01
+10,3,2,Brighton,2,99.35,0.02
+10,4,2,Brighton,2,98.13,
+10,5,2,Brighton,2,44.82,
+10,6,2,Brighton,2,74.61,
+11,1,2,Brighton,2,11.74,0.00
+11,2,2,Brighton,2,8.15,0.01
+11,3,2,Brighton,2,95.41,0.02
+11,4,2,Brighton,2,91.43,
+11,5,2,Brighton,2,39.15,
+11,6,2,Brighton,2,14.61,
+12,1,2,Brighton,2,73.87,0.01
+12,2,2,Brighton,2,87.25,0.01
+12,3,2,Brighton,2,86.34,0.01
+12,4,2,Brighton,2,77.30,
+12,5,2,Brighton,2,96.35,
+12,6,2,Brighton,2,88.80,
+1,1,3,Brighton,2,85.37,0.01
+1,2,3,Brighton,2,80.72,0.01
+1,3,3,Brighton,2,91.19,0.01
+1,4,3,Brighton,2,85.74,
+1,5,3,Brighton,2,86.48,
+1,6,3,Brighton,2,60.70,
+2,1,3,Brighton,2,100.42,0.01
+2,2,3,Brighton,2,79.47,0.01
+2,3,3,Brighton,2,100.39,0.00
+2,4,3,Brighton,2,92.69,
+2,5,3,Brighton,2,98.53,
+2,6,3,Brighton,2,93.91,
+3,1,3,Brighton,2,88.03,0.00
+3,2,3,Brighton,2,88.36,0.00
+3,3,3,Brighton,2,86.41,0.01
+3,4,3,Brighton,2,86.55,
+3,5,3,Brighton,2,62.50,
+3,6,3,Brighton,2,44.24,
+4,1,3,Brighton,2,49.80,0.02
+4,2,3,Brighton,2,38.38,0.02
+4,3,3,Brighton,2,88.96,0.04
+4,4,3,Brighton,2,73.33,
+4,5,3,Brighton,2,71.48,
+4,6,3,Brighton,2,88.41,
+5,1,3,Brighton,2,95.63,0.01
+5,2,3,Brighton,2,98.40,0.01
+5,3,3,Brighton,2,53.53,0.00
+5,4,3,Brighton,2,84.27,
+5,5,3,Brighton,2,76.69,
+5,6,3,Brighton,2,86.81,
+6,1,3,Brighton,2,96.95,0.01
+6,2,3,Brighton,2,94.25,0.02
+6,3,3,Brighton,2,66.55,0.01
+6,4,3,Brighton,2,78.03,
+6,5,3,Brighton,2,41.33,
+6,6,3,Brighton,2,88.89,
+7,1,3,Brighton,2,96.28,0.01
+7,2,3,Brighton,2,96.08,0.04
+7,3,3,Brighton,2,37.58,0.02
+7,4,3,Brighton,2,79.73,
+7,5,3,Brighton,2,90.64,
+7,6,3,Brighton,2,5.09,
+8,1,3,Brighton,2,94.29,0.02
+8,2,3,Brighton,2,97.53,0.02
+8,3,3,Brighton,2,81.79,0.01
+8,4,3,Brighton,2,8.32,
+8,5,3,Brighton,2,0.00,
+8,6,3,Brighton,2,46.34,
+9,1,3,Brighton,2,91.60,0.01
+9,2,3,Brighton,2,96.26,0.01
+9,3,3,Brighton,2,2.92,0.00
+9,4,3,Brighton,2,78.45,
+9,5,3,Brighton,2,1.84,
+9,6,3,Brighton,2,45.54,
+10,1,3,Brighton,2,95.34,0.00
+10,2,3,Brighton,2,94.76,0.00
+10,3,3,Brighton,2,89.09,0.00
+10,4,3,Brighton,2,79.41,
+10,5,3,Brighton,2,0.65,
+10,6,3,Brighton,2,93.67,
+11,1,3,Brighton,2,95.54,0.00
+11,2,3,Brighton,2,94.40,0.01
+11,3,3,Brighton,2,95.80,0.00
+11,4,3,Brighton,2,82.70,
+11,5,3,Brighton,2,87.26,
+11,6,3,Brighton,2,70.62,
+12,1,3,Brighton,2,96.90,0.01
+12,2,3,Brighton,2,85.34,0.02
+12,3,3,Brighton,2,77.40,0.01
+12,4,3,Brighton,2,82.49,
+12,5,3,Brighton,2,85.07,
+12,6,3,Brighton,2,39.86,
+1,1,4,Brighton,2,96.10,0.01
+1,2,4,Brighton,2,95.60,0.01
+1,3,4,Brighton,2,92.19,0.00
+1,4,4,Brighton,2,92.19,
+1,5,4,Brighton,2,94.23,
+1,6,4,Brighton,2,89.14,
+2,1,4,Brighton,2,96.82,0.01
+2,2,4,Brighton,2,94.25,0.01
+2,3,4,Brighton,2,91.97,0.01
+2,4,4,Brighton,2,91.32,
+2,5,4,Brighton,2,91.31,
+2,6,4,Brighton,2,86.24,
+3,1,4,Brighton,2,98.45,0.01
+3,2,4,Brighton,2,93.55,0.01
+3,3,4,Brighton,2,97.39,0.01
+3,4,4,Brighton,2,82.63,
+3,5,4,Brighton,2,70.91,
+3,6,4,Brighton,2,87.41,
+4,1,4,Brighton,2,96.33,0.00
+4,2,4,Brighton,2,97.90,0.00
+4,3,4,Brighton,2,81.32,0.01
+4,4,4,Brighton,2,83.31,
+4,5,4,Brighton,2,87.87,
+4,6,4,Brighton,2,39.70,
+5,1,4,Brighton,2,91.68,0.00
+5,2,4,Brighton,2,90.79,0.01
+5,3,4,Brighton,2,78.28,0.00
+5,4,4,Brighton,2,93.67,
+5,5,4,Brighton,2,96.20,
+5,6,4,Brighton,2,90.67,
+6,1,4,Brighton,2,97.20,0.01
+6,2,4,Brighton,2,91.59,0.01
+6,3,4,Brighton,2,87.46,0.01
+6,4,4,Brighton,2,86.19,
+6,5,4,Brighton,2,76.80,
+6,6,4,Brighton,2,84.49,
+7,1,4,Brighton,2,73.82,0.01
+7,2,4,Brighton,2,90.61,0.01
+7,3,4,Brighton,2,83.24,0.01
+7,4,4,Brighton,2,87.84,
+7,5,4,Brighton,2,88.25,
+7,6,4,Brighton,2,84.87,
+8,1,4,Brighton,2,94.42,0.01
+8,2,4,Brighton,2,85.92,0.01
+8,3,4,Brighton,2,94.42,0.01
+8,4,4,Brighton,2,74.21,
+8,5,4,Brighton,2,81.94,
+8,6,4,Brighton,2,82.59,
+9,1,4,Brighton,2,89.61,0.01
+9,2,4,Brighton,2,87.41,0.01
+9,3,4,Brighton,2,76.26,0.02
+9,4,4,Brighton,2,68.62,
+9,5,4,Brighton,2,73.64,
+9,6,4,Brighton,2,79.63,
+10,1,4,Brighton,2,91.56,0.02
+10,2,4,Brighton,2,57.63,0.01
+10,3,4,Brighton,2,37.65,0.01
+10,4,4,Brighton,2,81.77,
+10,5,4,Brighton,2,82.75,
+10,6,4,Brighton,2,76.31,
+11,1,4,Brighton,2,98.00,0.02
+11,2,4,Brighton,2,97.92,0.02
+11,3,4,Brighton,2,85.37,0.03
+11,4,4,Brighton,2,78.22,
+11,5,4,Brighton,2,84.26,
+11,6,4,Brighton,2,83.33,
+12,1,4,Brighton,2,85.61,0.02
+12,2,4,Brighton,2,77.57,0.01
+12,3,4,Brighton,2,92.60,0.00
+12,4,4,Brighton,2,93.69,
+12,5,4,Brighton,2,75.13,
+12,6,4,Brighton,2,76.76,
+1,1,5,Brighton,2,93.75,0.00
+1,2,5,Brighton,2,90.37,0.00
+1,3,5,Brighton,2,93.20,0.00
+1,4,5,Brighton,2,92.93,
+1,5,5,Brighton,2,91.45,
+1,6,5,Brighton,2,81.13,
+2,1,5,Brighton,2,97.34,0.01
+2,2,5,Brighton,2,88.67,0.01
+2,3,5,Brighton,2,95.96,0.01
+2,4,5,Brighton,2,92.78,
+2,5,5,Brighton,2,94.24,
+2,6,5,Brighton,2,93.35,
+3,1,5,Brighton,2,93.82,0.01
+3,2,5,Brighton,2,97.86,0.00
+3,3,5,Brighton,2,92.42,0.00
+3,4,5,Brighton,2,88.67,
+3,5,5,Brighton,2,78.83,
+3,6,5,Brighton,2,77.20,
+4,1,5,Brighton,2,80.48,0.00
+4,2,5,Brighton,2,77.23,0.00
+4,3,5,Brighton,2,88.52,0.00
+4,4,5,Brighton,2,83.65,
+4,5,5,Brighton,2,84.03,
+4,6,5,Brighton,2,76.00,
+5,1,5,Brighton,2,96.05,0.01
+5,2,5,Brighton,2,94.97,0.01
+5,3,5,Brighton,2,76.83,0.01
+5,4,5,Brighton,2,69.40,
+5,5,5,Brighton,2,89.27,
+5,6,5,Brighton,2,92.72,
+6,1,5,Brighton,2,97.44,0.02
+6,2,5,Brighton,2,85.55,0.00
+6,3,5,Brighton,2,82.43,0.02
+6,4,5,Brighton,2,86.11,
+6,5,5,Brighton,2,70.31,
+6,6,5,Brighton,2,91.01,
+7,1,5,Brighton,2,57.89,0.01
+7,2,5,Brighton,2,80.51,0.00
+7,3,5,Brighton,2,72.40,0.00
+7,4,5,Brighton,2,71.54,
+7,5,5,Brighton,2,90.24,
+7,6,5,Brighton,2,62.31,
+8,1,5,Brighton,2,66.87,0.00
+8,2,5,Brighton,2,91.27,0.02
+8,3,5,Brighton,2,88.27,0.02
+8,4,5,Brighton,2,33.94,
+8,5,5,Brighton,2,52.11,
+8,6,5,Brighton,2,68.35,
+9,1,5,Brighton,2,92.91,0.01
+9,2,5,Brighton,2,85.36,0.01
+9,3,5,Brighton,2,56.29,0.01
+9,4,5,Brighton,2,65.56,
+9,5,5,Brighton,2,48.01,
+9,6,5,Brighton,2,62.93,
+10,1,5,Brighton,2,78.65,0.02
+10,2,5,Brighton,2,81.76,0.02
+10,3,5,Brighton,2,75.37,0.02
+10,4,5,Brighton,2,86.44,
+10,5,5,Brighton,2,42.31,
+10,6,5,Brighton,2,81.53,
+11,1,5,Brighton,2,68.43,0.03
+11,2,5,Brighton,2,66.82,0.02
+11,3,5,Brighton,2,92.19,0.02
+11,4,5,Brighton,2,84.12,
+11,5,5,Brighton,2,70.22,
+11,6,5,Brighton,2,56.19,
+12,1,5,Brighton,2,85.46,0.01
+12,2,5,Brighton,2,83.39,0.01
+12,3,5,Brighton,2,85.45,0.01
+12,4,5,Brighton,2,84.50,
+12,5,5,Brighton,2,85.52,
+12,6,5,Brighton,2,68.48,
+1,1,1,Queenscliff Pier,5,100.40,0.34
+1,2,1,Queenscliff Pier,5,100.17,0.31
+1,3,1,Queenscliff Pier,5,100.35,0.31
+1,4,1,Queenscliff Pier,5,97.95,
+1,5,1,Queenscliff Pier,5,96.45,
+1,6,1,Queenscliff Pier,5,98.91,
+2,1,1,Queenscliff Pier,5,98.21,0.23
+2,2,1,Queenscliff Pier,5,98.47,0.20
+2,3,1,Queenscliff Pier,5,98.97,0.23
+2,4,1,Queenscliff Pier,5,99.11,
+2,5,1,Queenscliff Pier,5,98.70,
+2,6,1,Queenscliff Pier,5,99.56,
+3,1,1,Queenscliff Pier,5,103.09,0.18
+3,2,1,Queenscliff Pier,5,104.68,0.18
+3,3,1,Queenscliff Pier,5,104.96,0.20
+3,4,1,Queenscliff Pier,5,105.43,
+3,5,1,Queenscliff Pier,5,105.59,
+3,6,1,Queenscliff Pier,5,105.86,
+1,1,2,Queenscliff Pier,5,95.52,0.19
+1,2,2,Queenscliff Pier,5,79.18,0.19
+1,3,2,Queenscliff Pier,5,96.53,0.18
+1,4,2,Queenscliff Pier,5,98.49,
+1,5,2,Queenscliff Pier,5,98.75,
+1,6,2,Queenscliff Pier,5,98.94,
+2,1,2,Queenscliff Pier,5,94.60,0.23
+2,2,2,Queenscliff Pier,5,98.67,0.14
+2,3,2,Queenscliff Pier,5,88.91,0.26
+2,4,2,Queenscliff Pier,5,83.22,
+2,5,2,Queenscliff Pier,5,99.04,
+2,6,2,Queenscliff Pier,5,99.44,
+3,1,2,Queenscliff Pier,5,110.17,0.30
+3,2,2,Queenscliff Pier,5,110.93,0.27
+3,3,2,Queenscliff Pier,5,111.15,0.27
+3,4,2,Queenscliff Pier,5,110.27,
+3,5,2,Queenscliff Pier,5,110.14,
+3,6,2,Queenscliff Pier,5,110.39,
+1,1,3,Queenscliff Pier,5,96.53,0.19
+1,2,3,Queenscliff Pier,5,98.88,0.21
+1,3,3,Queenscliff Pier,5,87.80,0.19
+1,4,3,Queenscliff Pier,5,99.02,
+1,5,3,Queenscliff Pier,5,99.33,
+1,6,3,Queenscliff Pier,5,99.54,
+2,1,3,Queenscliff Pier,5,93.99,0.20
+2,2,3,Queenscliff Pier,5,100.37,0.25
+2,3,3,Queenscliff Pier,5,100.54,0.22
+2,4,3,Queenscliff Pier,5,101.66,
+2,5,3,Queenscliff Pier,5,101.94,
+2,6,3,Queenscliff Pier,5,102.12,
+3,1,3,Queenscliff Pier,5,104.03,0.13
+3,2,3,Queenscliff Pier,5,110.06,0.10
+3,3,3,Queenscliff Pier,5,110.61,0.11
+3,4,3,Queenscliff Pier,5,110.09,
+3,5,3,Queenscliff Pier,5,113.63,
+3,6,3,Queenscliff Pier,5,111.41,
+1,1,4,Queenscliff Pier,5,101.10,0.10
+1,2,4,Queenscliff Pier,5,102.08,0.11
+1,3,4,Queenscliff Pier,5,103.23,0.10
+1,4,4,Queenscliff Pier,5,101.69,
+1,5,4,Queenscliff Pier,5,102.12,
+1,6,4,Queenscliff Pier,5,103.15,
+2,1,4,Queenscliff Pier,5,101.81,0.10
+2,2,4,Queenscliff Pier,5,101.77,0.07
+2,3,4,Queenscliff Pier,5,102.38,0.17
+2,4,4,Queenscliff Pier,5,101.34,
+2,5,4,Queenscliff Pier,5,101.43,
+2,6,4,Queenscliff Pier,5,103.17,
+3,1,4,Queenscliff Pier,5,99.64,0.11
+3,2,4,Queenscliff Pier,5,101.09,0.12
+3,3,4,Queenscliff Pier,5,99.64,0.12
+3,4,4,Queenscliff Pier,5,100.80,
+3,5,4,Queenscliff Pier,5,100.98,
+3,6,4,Queenscliff Pier,5,108.80,
+1,1,5,Queenscliff Pier,5,102.04,0.18
+1,2,5,Queenscliff Pier,5,100.92,0.17
+1,3,5,Queenscliff Pier,5,94.83,0.18
+1,4,5,Queenscliff Pier,5,62.72,
+1,5,5,Queenscliff Pier,5,101.99,
+1,6,5,Queenscliff Pier,5,95.11,
+2,1,5,Queenscliff Pier,5,100.23,0.15
+2,2,5,Queenscliff Pier,5,100.33,0.14
+2,3,5,Queenscliff Pier,5,101.11,0.20
+2,4,5,Queenscliff Pier,5,100.48,
+2,5,5,Queenscliff Pier,5,100.51,
+2,6,5,Queenscliff Pier,5,101.66,
+3,1,5,Queenscliff Pier,5,99.63,0.22
+3,2,5,Queenscliff Pier,5,101.09,0.24
+3,3,5,Queenscliff Pier,5,100.51,0.26
+3,4,5,Queenscliff Pier,5,100.98,
+3,5,5,Queenscliff Pier,5,100.93,
+3,6,5,Queenscliff Pier,5,101.14,
+1,1,1,Queenscliff Harbour,4,90.89,0.01
+1,2,1,Queenscliff Harbour,4,96.02,0.03
+1,3,1,Queenscliff Harbour,4,98.66,0.02
+1,4,1,Queenscliff Harbour,4,94.67,
+1,5,1,Queenscliff Harbour,4,95.59,
+1,6,1,Queenscliff Harbour,4,98.20,
+2,1,1,Queenscliff Harbour,4,99.77,0.03
+2,2,1,Queenscliff Harbour,4,93.72,0.02
+2,3,1,Queenscliff Harbour,4,102.83,0.02
+2,4,1,Queenscliff Harbour,4,107.32,
+2,5,1,Queenscliff Harbour,4,101.73,
+2,6,1,Queenscliff Harbour,4,104.58,
+3,1,1,Queenscliff Harbour,4,97.53,0.01
+3,2,1,Queenscliff Harbour,4,94.66,0.02
+3,3,1,Queenscliff Harbour,4,69.53,0.01
+3,4,1,Queenscliff Harbour,4,45.05,
+3,5,1,Queenscliff Harbour,4,94.68,
+3,6,1,Queenscliff Harbour,4,103.74,
+4,1,1,Queenscliff Harbour,4,100.85,0.02
+4,2,1,Queenscliff Harbour,4,105.45,0.01
+4,3,1,Queenscliff Harbour,4,107.72,0.01
+4,4,1,Queenscliff Harbour,4,104.34,
+4,5,1,Queenscliff Harbour,4,99.71,
+4,6,1,Queenscliff Harbour,4,102.06,
+5,1,1,Queenscliff Harbour,4,100.90,0.02
+5,2,1,Queenscliff Harbour,4,103.35,0.03
+5,3,1,Queenscliff Harbour,4,100.29,0.02
+5,4,1,Queenscliff Harbour,4,103.31,
+5,5,1,Queenscliff Harbour,4,103.04,
+5,6,1,Queenscliff Harbour,4,101.63,
+6,1,1,Queenscliff Harbour,4,32.13,0.01
+6,2,1,Queenscliff Harbour,4,97.31,0.06
+6,3,1,Queenscliff Harbour,4,96.40,0.04
+6,4,1,Queenscliff Harbour,4,41.30,
+6,5,1,Queenscliff Harbour,4,106.28,
+6,6,1,Queenscliff Harbour,4,104.25,
+7,1,1,Queenscliff Harbour,4,69.65,0.03
+7,2,1,Queenscliff Harbour,4,95.17,0.02
+7,3,1,Queenscliff Harbour,4,100.38,0.03
+7,4,1,Queenscliff Harbour,4,98.57,
+7,5,1,Queenscliff Harbour,4,94.51,
+7,6,1,Queenscliff Harbour,4,98.36,
+8,1,1,Queenscliff Harbour,4,111.51,0.02
+8,2,1,Queenscliff Harbour,4,112.84,0.03
+8,3,1,Queenscliff Harbour,4,118.87,0.02
+8,4,1,Queenscliff Harbour,4,95.06,
+8,5,1,Queenscliff Harbour,4,107.55,
+8,6,1,Queenscliff Harbour,4,107.26,
+9,1,1,Queenscliff Harbour,4,99.55,0.03
+9,2,1,Queenscliff Harbour,4,98.55,0.04
+9,3,1,Queenscliff Harbour,4,102.73,0.04
+9,4,1,Queenscliff Harbour,4,105.69,
+9,5,1,Queenscliff Harbour,4,100.84,
+9,6,1,Queenscliff Harbour,4,101.67,
+10,1,1,Queenscliff Harbour,4,94.23,0.07
+10,2,1,Queenscliff Harbour,4,94.61,0.07
+10,3,1,Queenscliff Harbour,4,105.95,0.08
+10,4,1,Queenscliff Harbour,4,102.88,
+10,5,1,Queenscliff Harbour,4,98.41,
+10,6,1,Queenscliff Harbour,4,97.61,
+11,1,1,Queenscliff Harbour,4,94.72,0.01
+11,2,1,Queenscliff Harbour,4,94.61,0.02
+11,3,1,Queenscliff Harbour,4,103.40,0.01
+11,4,1,Queenscliff Harbour,4,0.36,
+11,5,1,Queenscliff Harbour,4,97.91,
+11,6,1,Queenscliff Harbour,4,93.28,
+12,1,1,Queenscliff Harbour,4,99.33,0.04
+12,2,1,Queenscliff Harbour,4,99.29,0.04
+12,3,1,Queenscliff Harbour,4,99.28,0.04
+12,4,1,Queenscliff Harbour,4,99.27,
+12,5,1,Queenscliff Harbour,4,99.25,
+12,6,1,Queenscliff Harbour,4,96.38,
+1,1,2,Queenscliff Harbour,4,81.52,0.02
+1,2,2,Queenscliff Harbour,4,85.69,0.07
+1,3,2,Queenscliff Harbour,4,96.03,0.04
+1,4,2,Queenscliff Harbour,4,94.64,
+1,5,2,Queenscliff Harbour,4,91.63,
+1,6,2,Queenscliff Harbour,4,93.75,
+2,1,2,Queenscliff Harbour,4,84.46,0.03
+2,2,2,Queenscliff Harbour,4,96.73,0.02
+2,3,2,Queenscliff Harbour,4,98.82,0.03
+2,4,2,Queenscliff Harbour,4,97.35,
+2,5,2,Queenscliff Harbour,4,95.91,
+2,6,2,Queenscliff Harbour,4,98.70,
+3,1,2,Queenscliff Harbour,4,89.38,0.05
+3,2,2,Queenscliff Harbour,4,93.71,0.05
+3,3,2,Queenscliff Harbour,4,87.27,0.04
+3,4,2,Queenscliff Harbour,4,75.77,
+3,5,2,Queenscliff Harbour,4,88.37,
+3,6,2,Queenscliff Harbour,4,82.88,
+4,1,2,Queenscliff Harbour,4,81.03,0.02
+4,2,2,Queenscliff Harbour,4,94.25,0.04
+4,3,2,Queenscliff Harbour,4,95.15,0.02
+4,4,2,Queenscliff Harbour,4,94.51,
+4,5,2,Queenscliff Harbour,4,88.71,
+4,6,2,Queenscliff Harbour,4,94.41,
+5,1,2,Queenscliff Harbour,4,77.86,0.03
+5,2,2,Queenscliff Harbour,4,87.07,0.02
+5,3,2,Queenscliff Harbour,4,95.84,0.02
+5,4,2,Queenscliff Harbour,4,95.60,
+5,5,2,Queenscliff Harbour,4,85.22,
+5,6,2,Queenscliff Harbour,4,94.28,
+6,1,2,Queenscliff Harbour,4,57.86,0.18
+6,2,2,Queenscliff Harbour,4,89.45,0.06
+6,3,2,Queenscliff Harbour,4,91.24,0.08
+6,4,2,Queenscliff Harbour,4,80.09,
+6,5,2,Queenscliff Harbour,4,95.66,
+6,6,2,Queenscliff Harbour,4,91.92,
+7,1,2,Queenscliff Harbour,4,91.51,0.01
+7,2,2,Queenscliff Harbour,4,97.06,0.02
+7,3,2,Queenscliff Harbour,4,95.32,0.01
+7,4,2,Queenscliff Harbour,4,87.00,
+7,5,2,Queenscliff Harbour,4,93.32,
+7,6,2,Queenscliff Harbour,4,95.74,
+8,1,2,Queenscliff Harbour,4,88.01,0.02
+8,2,2,Queenscliff Harbour,4,95.58,0.02
+8,3,2,Queenscliff Harbour,4,97.71,0.03
+8,4,2,Queenscliff Harbour,4,98.19,
+8,5,2,Queenscliff Harbour,4,90.62,
+8,6,2,Queenscliff Harbour,4,97.71,
+9,1,2,Queenscliff Harbour,4,84.87,0.04
+9,2,2,Queenscliff Harbour,4,90.62,0.03
+9,3,2,Queenscliff Harbour,4,95.23,0.03
+9,4,2,Queenscliff Harbour,4,76.00,
+9,5,2,Queenscliff Harbour,4,89.69,
+9,6,2,Queenscliff Harbour,4,96.43,
+10,1,2,Queenscliff Harbour,4,91.26,0.03
+10,2,2,Queenscliff Harbour,4,91.57,0.04
+10,3,2,Queenscliff Harbour,4,94.56,0.03
+10,4,2,Queenscliff Harbour,4,81.96,
+10,5,2,Queenscliff Harbour,4,66.36,
+10,6,2,Queenscliff Harbour,4,92.05,
+11,1,2,Queenscliff Harbour,4,91.88,0.01
+11,2,2,Queenscliff Harbour,4,92.79,0.01
+11,3,2,Queenscliff Harbour,4,93.29,0.01
+11,4,2,Queenscliff Harbour,4,90.52,
+11,5,2,Queenscliff Harbour,4,94.28,
+11,6,2,Queenscliff Harbour,4,92.62,
+12,1,2,Queenscliff Harbour,4,90.93,0.01
+12,2,2,Queenscliff Harbour,4,92.02,0.02
+12,3,2,Queenscliff Harbour,4,93.15,0.02
+12,4,2,Queenscliff Harbour,4,91.37,
+12,5,2,Queenscliff Harbour,4,91.63,
+12,6,2,Queenscliff Harbour,4,92.14,
+1,1,3,Queenscliff Harbour,4,81.76,0.05
+1,2,3,Queenscliff Harbour,4,89.42,0.04
+1,3,3,Queenscliff Harbour,4,95.45,0.04
+1,4,3,Queenscliff Harbour,4,96.22,
+1,5,3,Queenscliff Harbour,4,95.35,
+1,6,3,Queenscliff Harbour,4,96.24,
+2,1,3,Queenscliff Harbour,4,99.15,0.04
+2,2,3,Queenscliff Harbour,4,99.53,0.04
+2,3,3,Queenscliff Harbour,4,101.19,0.05
+2,4,3,Queenscliff Harbour,4,99.61,
+2,5,3,Queenscliff Harbour,4,100.23,
+2,6,3,Queenscliff Harbour,4,100.46,
+3,1,3,Queenscliff Harbour,4,93.65,0.09
+3,2,3,Queenscliff Harbour,4,96.66,0.07
+3,3,3,Queenscliff Harbour,4,97.20,0.10
+3,4,3,Queenscliff Harbour,4,96.54,
+3,5,3,Queenscliff Harbour,4,97.94,
+3,6,3,Queenscliff Harbour,4,98.75,
+4,1,3,Queenscliff Harbour,4,98.37,0.09
+4,2,3,Queenscliff Harbour,4,98.94,0.10
+4,3,3,Queenscliff Harbour,4,99.80,0.10
+4,4,3,Queenscliff Harbour,4,101.54,
+4,5,3,Queenscliff Harbour,4,101.51,
+4,6,3,Queenscliff Harbour,4,102.01,
+5,1,3,Queenscliff Harbour,4,97.40,0.02
+5,2,3,Queenscliff Harbour,4,98.74,0.02
+5,3,3,Queenscliff Harbour,4,99.17,0.02
+5,4,3,Queenscliff Harbour,4,94.17,
+5,5,3,Queenscliff Harbour,4,95.63,
+5,6,3,Queenscliff Harbour,4,95.77,
+6,1,3,Queenscliff Harbour,4,91.12,0.04
+6,2,3,Queenscliff Harbour,4,91.78,0.04
+6,3,3,Queenscliff Harbour,4,79.45,0.04
+6,4,3,Queenscliff Harbour,4,91.78,
+6,5,3,Queenscliff Harbour,4,98.28,
+6,6,3,Queenscliff Harbour,4,86.15,
+7,1,3,Queenscliff Harbour,4,79.60,0.02
+7,2,3,Queenscliff Harbour,4,101.84,0.02
+7,3,3,Queenscliff Harbour,4,102.03,0.02
+7,4,3,Queenscliff Harbour,4,110.11,
+7,5,3,Queenscliff Harbour,4,109.56,
+7,6,3,Queenscliff Harbour,4,102.99,
+8,1,3,Queenscliff Harbour,4,50.90,0.02
+8,2,3,Queenscliff Harbour,4,79.62,0.03
+8,3,3,Queenscliff Harbour,4,96.06,0.02
+8,4,3,Queenscliff Harbour,4,96.85,
+8,5,3,Queenscliff Harbour,4,98.19,
+8,6,3,Queenscliff Harbour,4,97.65,
+9,1,3,Queenscliff Harbour,4,50.86,0.05
+9,2,3,Queenscliff Harbour,4,72.25,0.03
+9,3,3,Queenscliff Harbour,4,94.35,0.03
+9,4,3,Queenscliff Harbour,4,51.18,
+9,5,3,Queenscliff Harbour,4,91.75,
+9,6,3,Queenscliff Harbour,4,94.01,
+10,1,3,Queenscliff Harbour,4,93.56,0.04
+10,2,3,Queenscliff Harbour,4,91.72,0.03
+10,3,3,Queenscliff Harbour,4,92.56,0.04
+10,4,3,Queenscliff Harbour,4,91.72,
+10,5,3,Queenscliff Harbour,4,89.54,
+10,6,3,Queenscliff Harbour,4,95.30,
+11,1,3,Queenscliff Harbour,4,91.38,0.01
+11,2,3,Queenscliff Harbour,4,91.47,0.01
+11,3,3,Queenscliff Harbour,4,62.34,0.01
+11,4,3,Queenscliff Harbour,4,90.48,
+11,5,3,Queenscliff Harbour,4,89.20,
+11,6,3,Queenscliff Harbour,4,66.21,
+12,1,3,Queenscliff Harbour,4,84.38,0.01
+12,2,3,Queenscliff Harbour,4,81.32,0.02
+12,3,3,Queenscliff Harbour,4,93.09,0.01
+12,4,3,Queenscliff Harbour,4,77.29,
+12,5,3,Queenscliff Harbour,4,91.56,
+12,6,3,Queenscliff Harbour,4,92.18,
+1,1,4,Queenscliff Harbour,4,59.86,0.07
+1,2,4,Queenscliff Harbour,4,65.75,0.04
+1,3,4,Queenscliff Harbour,4,90.68,0.06
+1,4,4,Queenscliff Harbour,4,91.76,
+1,5,4,Queenscliff Harbour,4,89.86,
+1,6,4,Queenscliff Harbour,4,91.61,
+2,1,4,Queenscliff Harbour,4,34.45,0.02
+2,2,4,Queenscliff Harbour,4,87.32,0.04
+2,3,4,Queenscliff Harbour,4,87.88,0.05
+2,4,4,Queenscliff Harbour,4,86.73,
+2,5,4,Queenscliff Harbour,4,87.98,
+2,6,4,Queenscliff Harbour,4,90.34,
+3,1,4,Queenscliff Harbour,4,66.37,0.04
+3,2,4,Queenscliff Harbour,4,84.33,0.04
+3,3,4,Queenscliff Harbour,4,85.28,0.04
+3,4,4,Queenscliff Harbour,4,84.31,
+3,5,4,Queenscliff Harbour,4,74.53,
+3,6,4,Queenscliff Harbour,4,79.32,
+4,1,4,Queenscliff Harbour,4,24.28,0.02
+4,2,4,Queenscliff Harbour,4,71.48,0.01
+4,3,4,Queenscliff Harbour,4,71.85,0.02
+4,4,4,Queenscliff Harbour,4,71.48,
+4,5,4,Queenscliff Harbour,4,64.80,
+4,6,4,Queenscliff Harbour,4,73.95,
+5,1,4,Queenscliff Harbour,4,59.40,0.03
+5,2,4,Queenscliff Harbour,4,61.78,0.05
+5,3,4,Queenscliff Harbour,4,84.86,0.04
+5,4,4,Queenscliff Harbour,4,88.64,
+5,5,4,Queenscliff Harbour,4,89.58,
+5,6,4,Queenscliff Harbour,4,90.81,
+6,1,4,Queenscliff Harbour,4,11.79,0.08
+6,2,4,Queenscliff Harbour,4,72.66,0.06
+6,3,4,Queenscliff Harbour,4,89.30,0.05
+6,4,4,Queenscliff Harbour,4,90.18,
+6,5,4,Queenscliff Harbour,4,92.52,
+6,6,4,Queenscliff Harbour,4,88.93,
+7,1,4,Queenscliff Harbour,4,76.06,0.04
+7,2,4,Queenscliff Harbour,4,91.71,0.03
+7,3,4,Queenscliff Harbour,4,90.37,0.04
+7,4,4,Queenscliff Harbour,4,91.60,
+7,5,4,Queenscliff Harbour,4,89.97,
+7,6,4,Queenscliff Harbour,4,91.96,
+8,1,4,Queenscliff Harbour,4,84.37,0.06
+8,2,4,Queenscliff Harbour,4,85.65,0.04
+8,3,4,Queenscliff Harbour,4,71.04,0.04
+8,4,4,Queenscliff Harbour,4,63.11,
+8,5,4,Queenscliff Harbour,4,64.76,
+8,6,4,Queenscliff Harbour,4,91.51,
+9,1,4,Queenscliff Harbour,4,0.41,0.05
+9,2,4,Queenscliff Harbour,4,90.23,0.06
+9,3,4,Queenscliff Harbour,4,87.18,0.05
+9,4,4,Queenscliff Harbour,4,85.14,
+9,5,4,Queenscliff Harbour,4,86.22,
+9,6,4,Queenscliff Harbour,4,91.92,
+10,1,4,Queenscliff Harbour,4,50.39,0.11
+10,2,4,Queenscliff Harbour,4,70.84,0.13
+10,3,4,Queenscliff Harbour,4,88.48,0.23
+10,4,4,Queenscliff Harbour,4,92.56,
+10,5,4,Queenscliff Harbour,4,91.73,
+10,6,4,Queenscliff Harbour,4,88.88,
+11,1,4,Queenscliff Harbour,4,71.66,0.04
+11,2,4,Queenscliff Harbour,4,91.38,0.04
+11,3,4,Queenscliff Harbour,4,89.39,0.03
+11,4,4,Queenscliff Harbour,4,87.87,
+11,5,4,Queenscliff Harbour,4,93.62,
+11,6,4,Queenscliff Harbour,4,80.99,
+12,1,4,Queenscliff Harbour,4,88.31,0.02
+12,2,4,Queenscliff Harbour,4,91.22,0.02
+12,3,4,Queenscliff Harbour,4,89.33,0.01
+12,4,4,Queenscliff Harbour,4,90.94,
+12,5,4,Queenscliff Harbour,4,91.04,
+12,6,4,Queenscliff Harbour,4,91.18,
+1,1,5,Queenscliff Harbour,4,93.57,0.03
+1,2,5,Queenscliff Harbour,4,91.56,0.03
+1,3,5,Queenscliff Harbour,4,99.32,0.03
+1,4,5,Queenscliff Harbour,4,95.91,
+1,5,5,Queenscliff Harbour,4,85.74,
+1,6,5,Queenscliff Harbour,4,88.96,
+2,1,5,Queenscliff Harbour,4,104.45,0.08
+2,2,5,Queenscliff Harbour,4,106.35,0.07
+2,3,5,Queenscliff Harbour,4,103.39,0.09
+2,4,5,Queenscliff Harbour,4,95.72,
+2,5,5,Queenscliff Harbour,4,93.72,
+2,6,5,Queenscliff Harbour,4,99.43,
+3,1,5,Queenscliff Harbour,4,99.97,0.03
+3,2,5,Queenscliff Harbour,4,99.18,0.05
+3,3,5,Queenscliff Harbour,4,97.09,0.03
+3,4,5,Queenscliff Harbour,4,77.18,
+3,5,5,Queenscliff Harbour,4,86.34,
+3,6,5,Queenscliff Harbour,4,49.73,
+4,1,5,Queenscliff Harbour,4,100.63,0.01
+4,2,5,Queenscliff Harbour,4,101.13,0.02
+4,3,5,Queenscliff Harbour,4,101.22,0.00
+4,4,5,Queenscliff Harbour,4,100.69,
+4,5,5,Queenscliff Harbour,4,88.82,
+4,6,5,Queenscliff Harbour,4,99.60,
+5,1,5,Queenscliff Harbour,4,53.73,0.03
+5,2,5,Queenscliff Harbour,4,84.40,0.04
+5,3,5,Queenscliff Harbour,4,99.05,0.04
+5,4,5,Queenscliff Harbour,4,96.27,
+5,5,5,Queenscliff Harbour,4,52.64,
+5,6,5,Queenscliff Harbour,4,88.92,
+6,1,5,Queenscliff Harbour,4,96.40,0.02
+6,2,5,Queenscliff Harbour,4,96.06,0.03
+6,3,5,Queenscliff Harbour,4,99.81,0.02
+6,4,5,Queenscliff Harbour,4,97.11,
+6,5,5,Queenscliff Harbour,4,85.54,
+6,6,5,Queenscliff Harbour,4,88.36,
+7,1,5,Queenscliff Harbour,4,95.63,0.01
+7,2,5,Queenscliff Harbour,4,95.19,0.01
+7,3,5,Queenscliff Harbour,4,99.37,0.01
+7,4,5,Queenscliff Harbour,4,96.30,
+7,5,5,Queenscliff Harbour,4,85.61,
+7,6,5,Queenscliff Harbour,4,88.73,
+8,1,5,Queenscliff Harbour,4,105.27,0.01
+8,2,5,Queenscliff Harbour,4,104.20,0.01
+8,3,5,Queenscliff Harbour,4,104.89,0.01
+8,4,5,Queenscliff Harbour,4,137.75,
+8,5,5,Queenscliff Harbour,4,91.98,
+8,6,5,Queenscliff Harbour,4,94.43,
+9,1,5,Queenscliff Harbour,4,98.97,0.00
+9,2,5,Queenscliff Harbour,4,98.03,0.01
+9,3,5,Queenscliff Harbour,4,51.85,0.02
+9,4,5,Queenscliff Harbour,4,87.82,
+9,5,5,Queenscliff Harbour,4,81.97,
+9,6,5,Queenscliff Harbour,4,18.56,
+10,1,5,Queenscliff Harbour,4,100.76,0.02
+10,2,5,Queenscliff Harbour,4,99.68,0.03
+10,3,5,Queenscliff Harbour,4,100.27,0.02
+10,4,5,Queenscliff Harbour,4,96.65,
+10,5,5,Queenscliff Harbour,4,86.90,
+10,6,5,Queenscliff Harbour,4,89.24,
+11,1,5,Queenscliff Harbour,4,99.41,0.02
+11,2,5,Queenscliff Harbour,4,99.43,0.01
+11,3,5,Queenscliff Harbour,4,100.47,0.01
+11,4,5,Queenscliff Harbour,4,97.57,
+11,5,5,Queenscliff Harbour,4,65.48,
+11,6,5,Queenscliff Harbour,4,82.80,
+12,1,5,Queenscliff Harbour,4,92.56,0.02
+12,2,5,Queenscliff Harbour,4,86.29,0.01
+12,3,5,Queenscliff Harbour,4,88.55,0.01
+12,4,5,Queenscliff Harbour,4,98.09,
+12,5,5,Queenscliff Harbour,4,88.85,
+12,6,5,Queenscliff Harbour,4,98.32,
+1,1,1,St Kilda,1,63.44,0.02
+1,2,1,St Kilda,1,93.67,0.03
+1,3,1,St Kilda,1,89.47,0.02
+1,4,1,St Kilda,1,94.81,
+1,5,1,St Kilda,1,93.56,
+1,6,1,St Kilda,1,94.17,
+2,1,1,St Kilda,1,92.68,0.03
+2,2,1,St Kilda,1,91.42,0.04
+2,3,1,St Kilda,1,88.92,0.02
+2,4,1,St Kilda,1,93.35,
+2,5,1,St Kilda,1,94.39,
+2,6,1,St Kilda,1,89.73,
+3,1,1,St Kilda,1,92.27,0.04
+3,2,1,St Kilda,1,72.92,0.03
+3,3,1,St Kilda,1,83.53,0.04
+3,4,1,St Kilda,1,84.73,
+3,5,1,St Kilda,1,72.90,
+3,6,1,St Kilda,1,91.28,
+4,1,1,St Kilda,1,25.65,0.01
+4,2,1,St Kilda,1,48.37,0.01
+4,3,1,St Kilda,1,95.21,0.03
+4,4,1,St Kilda,1,79.69,
+4,5,1,St Kilda,1,87.95,
+4,6,1,St Kilda,1,91.54,
+5,1,1,St Kilda,1,23.43,0.02
+5,2,1,St Kilda,1,102.21,0.03
+5,3,1,St Kilda,1,84.74,0.02
+5,4,1,St Kilda,1,0.55,
+5,5,1,St Kilda,1,88.86,
+5,6,1,St Kilda,1,77.44,
+6,1,1,St Kilda,1,6.20,0.01
+6,2,1,St Kilda,1,89.29,0.02
+6,3,1,St Kilda,1,77.79,0.01
+6,4,1,St Kilda,1,73.12,
+6,5,1,St Kilda,1,89.06,
+6,6,1,St Kilda,1,73.67,
+7,1,1,St Kilda,1,85.53,0.01
+7,2,1,St Kilda,1,84.91,0.01
+7,3,1,St Kilda,1,71.44,0.01
+7,4,1,St Kilda,1,70.56,
+7,5,1,St Kilda,1,87.93,
+7,6,1,St Kilda,1,87.14,
+8,1,1,St Kilda,1,57.16,0.01
+8,2,1,St Kilda,1,18.16,0.01
+8,3,1,St Kilda,1,88.47,0.01
+8,4,1,St Kilda,1,88.32,
+8,5,1,St Kilda,1,91.94,
+8,6,1,St Kilda,1,91.93,
+9,1,1,St Kilda,1,98.85,0.04
+9,2,1,St Kilda,1,93.82,0.03
+9,3,1,St Kilda,1,97.68,0.00
+9,4,1,St Kilda,1,97.69,
+9,5,1,St Kilda,1,95.36,
+9,6,1,St Kilda,1,92.81,
+10,1,1,St Kilda,1,87.91,0.05
+10,2,1,St Kilda,1,95.14,0.03
+10,3,1,St Kilda,1,90.49,0.05
+10,4,1,St Kilda,1,96.89,
+10,5,1,St Kilda,1,60.46,
+10,6,1,St Kilda,1,96.75,
+11,1,1,St Kilda,1,63.77,0.03
+11,2,1,St Kilda,1,83.61,0.03
+11,3,1,St Kilda,1,82.69,0.03
+11,4,1,St Kilda,1,23.22,
+11,5,1,St Kilda,1,85.82,
+11,6,1,St Kilda,1,49.76,
+12,1,1,St Kilda,1,57.74,0.02
+12,2,1,St Kilda,1,51.68,0.03
+12,3,1,St Kilda,1,80.11,0.01
+12,4,1,St Kilda,1,38.31,
+12,5,1,St Kilda,1,97.59,
+12,6,1,St Kilda,1,72.07,
+1,1,2,St Kilda,1,89.36,0.01
+1,2,2,St Kilda,1,94.68,0.01
+1,3,2,St Kilda,1,63.44,0.01
+1,4,2,St Kilda,1,94.10,
+1,5,2,St Kilda,1,93.51,
+1,6,2,St Kilda,1,94.22,
+2,1,2,St Kilda,1,92.70,0.01
+2,2,2,St Kilda,1,91.30,0.01
+2,3,2,St Kilda,1,93.17,0.01
+2,4,2,St Kilda,1,88.94,
+2,5,2,St Kilda,1,94.47,
+2,6,2,St Kilda,1,89.85,
+3,1,2,St Kilda,1,92.40,0.02
+3,2,2,St Kilda,1,72.80,0.02
+3,3,2,St Kilda,1,83.53,0.02
+3,4,2,St Kilda,1,73.69,
+3,5,2,St Kilda,1,83.49,
+3,6,2,St Kilda,1,91.23,
+4,1,2,St Kilda,1,25.65,0.01
+4,2,2,St Kilda,1,48.44,0.01
+4,3,2,St Kilda,1,95.05,0.02
+4,4,2,St Kilda,1,78.87,
+4,5,2,St Kilda,1,87.82,
+4,6,2,St Kilda,1,92.75,
+5,1,2,St Kilda,1,92.94,0.01
+5,2,2,St Kilda,1,29.42,0.01
+5,3,2,St Kilda,1,79.85,0.01
+5,4,2,St Kilda,1,89.49,
+5,5,2,St Kilda,1,95.87,
+5,6,2,St Kilda,1,97.77,
+6,1,2,St Kilda,1,55.46,0.01
+6,2,2,St Kilda,1,38.36,0.01
+6,3,2,St Kilda,1,92.83,0.01
+6,4,2,St Kilda,1,80.40,
+6,5,2,St Kilda,1,100.59,
+6,6,2,St Kilda,1,93.23,
+7,1,2,St Kilda,1,85.53,0.01
+7,2,2,St Kilda,1,87.15,0.01
+7,3,2,St Kilda,1,71.44,0.01
+7,4,2,St Kilda,1,69.73,
+7,5,2,St Kilda,1,87.27,
+7,6,2,St Kilda,1,87.11,
+8,1,2,St Kilda,1,38.82,0.01
+8,2,2,St Kilda,1,17.39,0.01
+8,3,2,St Kilda,1,88.64,0.01
+8,4,2,St Kilda,1,88.49,
+8,5,2,St Kilda,1,92.09,
+8,6,2,St Kilda,1,91.86,
+9,1,2,St Kilda,1,0.98,0.02
+9,2,2,St Kilda,1,99.89,0.02
+9,3,2,St Kilda,1,97.79,0.01
+9,4,2,St Kilda,1,59.34,
+9,5,2,St Kilda,1,81.70,
+9,6,2,St Kilda,1,93.66,
+10,1,2,St Kilda,1,16.93,0.03
+10,2,2,St Kilda,1,92.50,0.02
+10,3,2,St Kilda,1,94.59,0.03
+10,4,2,St Kilda,1,98.38,
+10,5,2,St Kilda,1,88.76,
+10,6,2,St Kilda,1,46.51,
+11,1,2,St Kilda,1,83.90,0.02
+11,2,2,St Kilda,1,83.90,0.02
+11,3,2,St Kilda,1,97.83,0.02
+11,4,2,St Kilda,1,63.83,
+11,5,2,St Kilda,1,97.60,
+11,6,2,St Kilda,1,56.05,
+12,1,2,St Kilda,1,1.12,0.01
+12,2,2,St Kilda,1,103.73,0.01
+12,3,2,St Kilda,1,97.45,0.01
+12,4,2,St Kilda,1,54.78,
+12,5,2,St Kilda,1,84.32,
+12,6,2,St Kilda,1,102.34,
+1,1,3,St Kilda,1,92.39,0.01
+1,2,3,St Kilda,1,88.98,0.01
+1,3,3,St Kilda,1,98.44,0.01
+1,4,3,St Kilda,1,67.42,
+1,5,3,St Kilda,1,95.44,
+1,6,3,St Kilda,1,76.83,
+2,1,3,St Kilda,1,90.11,0.00
+2,2,3,St Kilda,1,59.48,0.01
+2,3,3,St Kilda,1,89.97,0.01
+2,4,3,St Kilda,1,43.57,
+2,5,3,St Kilda,1,83.04,
+2,6,3,St Kilda,1,45.95,
+3,1,3,St Kilda,1,94.40,0.01
+3,2,3,St Kilda,1,95.21,0.01
+3,3,3,St Kilda,1,92.10,0.01
+3,4,3,St Kilda,1,43.56,
+3,5,3,St Kilda,1,43.25,
+3,6,3,St Kilda,1,70.80,
+4,1,3,St Kilda,1,61.87,0.01
+4,2,3,St Kilda,1,76.42,0.01
+4,3,3,St Kilda,1,58.69,0.02
+4,4,3,St Kilda,1,59.94,
+4,5,3,St Kilda,1,98.63,
+4,6,3,St Kilda,1,97.94,
+5,1,3,St Kilda,1,92.14,0.01
+5,2,3,St Kilda,1,29.42,0.01
+5,3,3,St Kilda,1,97.25,0.01
+5,4,3,St Kilda,1,97.79,
+5,5,3,St Kilda,1,79.85,
+5,6,3,St Kilda,1,89.67,
+6,1,3,St Kilda,1,55.76,0.01
+6,2,3,St Kilda,1,38.36,0.01
+6,3,3,St Kilda,1,80.35,0.01
+6,4,3,St Kilda,1,82.63,
+6,5,3,St Kilda,1,100.75,
+6,6,3,St Kilda,1,92.85,
+7,1,3,St Kilda,1,58.58,0.01
+7,2,3,St Kilda,1,99.76,0.01
+7,3,3,St Kilda,1,87.47,0.03
+7,4,3,St Kilda,1,94.31,
+7,5,3,St Kilda,1,93.90,
+7,6,3,St Kilda,1,97.55,
+8,1,3,St Kilda,1,73.50,0.02
+8,2,3,St Kilda,1,78.57,0.02
+8,3,3,St Kilda,1,97.30,0.02
+8,4,3,St Kilda,1,97.71,
+8,5,3,St Kilda,1,97.68,
+8,6,3,St Kilda,1,94.75,
+9,1,3,St Kilda,1,0.98,0.02
+9,2,3,St Kilda,1,99.34,0.02
+9,3,3,St Kilda,1,59.34,0.02
+9,4,3,St Kilda,1,93.27,
+9,5,3,St Kilda,1,87.62,
+9,6,3,St Kilda,1,81.70,
+10,1,3,St Kilda,1,91.63,0.05
+10,2,3,St Kilda,1,16.93,0.04
+10,3,3,St Kilda,1,89.51,0.03
+10,4,3,St Kilda,1,46.51,
+10,5,3,St Kilda,1,92.22,
+10,6,3,St Kilda,1,94.65,
+11,1,3,St Kilda,1,83.90,0.01
+11,2,3,St Kilda,1,92.14,0.03
+11,3,3,St Kilda,1,96.35,0.02
+11,4,3,St Kilda,1,63.59,
+11,5,3,St Kilda,1,97.62,
+11,6,3,St Kilda,1,56.05,
+12,1,3,St Kilda,1,1.30,0.01
+12,2,3,St Kilda,1,102.55,0.01
+12,3,3,St Kilda,1,97.72,0.01
+12,4,3,St Kilda,1,54.78,
+12,5,3,St Kilda,1,84.36,
+12,6,3,St Kilda,1,102.52,
+1,1,4,St Kilda,1,88.46,0.00
+1,2,4,St Kilda,1,92.94,0.00
+1,3,4,St Kilda,1,98.51,0.01
+1,4,4,St Kilda,1,67.62,
+1,5,4,St Kilda,1,94.85,
+1,6,4,St Kilda,1,77.52,
+2,1,4,St Kilda,1,92.60,0.01
+2,2,4,St Kilda,1,59.33,0.01
+2,3,4,St Kilda,1,92.97,0.01
+2,4,4,St Kilda,1,43.57,
+2,5,4,St Kilda,1,83.04,
+2,6,4,St Kilda,1,45.78,
+3,1,4,St Kilda,1,70.80,0.01
+3,2,4,St Kilda,1,100.13,0.01
+3,3,4,St Kilda,1,96.48,0.01
+3,4,4,St Kilda,1,95.23,
+3,5,4,St Kilda,1,97.25,
+3,6,4,St Kilda,1,43.25,
+4,1,4,St Kilda,1,58.69,0.01
+4,2,4,St Kilda,1,59.94,0.01
+4,3,4,St Kilda,1,61.88,0.03
+4,4,4,St Kilda,1,77.40,
+4,5,4,St Kilda,1,89.47,
+4,6,4,St Kilda,1,97.25,
+5,1,4,St Kilda,1,92.38,0.01
+5,2,4,St Kilda,1,30.50,0.01
+5,3,4,St Kilda,1,99.44,0.01
+5,4,4,St Kilda,1,95.90,
+5,5,4,St Kilda,1,79.85,
+5,6,4,St Kilda,1,89.67,
+6,1,4,St Kilda,1,55.45,0.00
+6,2,4,St Kilda,1,38.36,0.01
+6,3,4,St Kilda,1,92.73,0.01
+6,4,4,St Kilda,1,82.95,
+6,5,4,St Kilda,1,101.21,
+6,6,4,St Kilda,1,93.71,
+7,1,4,St Kilda,1,58.84,0.00
+7,2,4,St Kilda,1,99.81,0.00
+7,3,4,St Kilda,1,91.84,0.00
+7,4,4,St Kilda,1,90.33,
+7,5,4,St Kilda,1,93.90,
+7,6,4,St Kilda,1,97.52,
+8,1,4,St Kilda,1,73.12,0.00
+8,2,4,St Kilda,1,79.32,0.01
+8,3,4,St Kilda,1,97.87,0.01
+8,4,4,St Kilda,1,97.49,
+8,5,4,St Kilda,1,97.87,
+8,6,4,St Kilda,1,97.25,
+9,1,4,St Kilda,1,0.98,0.00
+9,2,4,St Kilda,1,99.68,0.00
+9,3,4,St Kilda,1,97.05,0.00
+9,4,4,St Kilda,1,81.70,
+9,5,4,St Kilda,1,93.66,
+9,6,4,St Kilda,1,59.34,
+10,1,4,St Kilda,1,91.63,0.01
+10,2,4,St Kilda,1,16.93,0.01
+10,3,4,St Kilda,1,88.76,0.01
+10,4,4,St Kilda,1,46.51,
+10,5,4,St Kilda,1,94.63,
+10,6,4,St Kilda,1,94.65,
+11,1,4,St Kilda,1,97.28,0.01
+11,2,4,St Kilda,1,92.34,0.01
+11,3,4,St Kilda,1,99.21,0.01
+11,4,4,St Kilda,1,98.89,
+11,5,4,St Kilda,1,97.26,
+11,6,4,St Kilda,1,56.57,
+12,1,4,St Kilda,1,1.31,0.02
+12,2,4,St Kilda,1,101.54,0.01
+12,3,4,St Kilda,1,97.53,0.01
+12,4,4,St Kilda,1,54.78,
+12,5,4,St Kilda,1,84.17,
+12,6,4,St Kilda,1,103.17,
+1,1,5,St Kilda,1,3.14,0.00
+1,2,5,St Kilda,1,4.07,0.01
+1,3,5,St Kilda,1,37.27,0.01
+1,4,5,St Kilda,1,97.44,
+1,5,5,St Kilda,1,100.97,
+1,6,5,St Kilda,1,62.62,
+2,1,5,St Kilda,1,25.98,0.00
+2,2,5,St Kilda,1,98.80,0.00
+2,3,5,St Kilda,1,62.11,0.01
+2,4,5,St Kilda,1,98.74,
+2,5,5,St Kilda,1,72.52,
+2,6,5,St Kilda,1,78.88,
+3,1,5,St Kilda,1,86.33,0.02
+3,2,5,St Kilda,1,0.96,0.02
+3,3,5,St Kilda,1,28.80,0.04
+3,4,5,St Kilda,1,71.63,
+3,5,5,St Kilda,1,0.90,
+3,6,5,St Kilda,1,47.09,
+4,1,5,St Kilda,1,0.00,0.02
+4,2,5,St Kilda,1,34.56,0.01
+4,3,5,St Kilda,1,86.77,0.02
+4,4,5,St Kilda,1,0.00,
+4,5,5,St Kilda,1,85.73,
+4,6,5,St Kilda,1,74.65,
+5,1,5,St Kilda,1,48.33,0.01
+5,2,5,St Kilda,1,70.34,0.01
+5,3,5,St Kilda,1,48.52,0.01
+5,4,5,St Kilda,1,96.64,
+5,5,5,St Kilda,1,98.56,
+5,6,5,St Kilda,1,87.72,
+6,1,5,St Kilda,1,0.00,0.00
+6,2,5,St Kilda,1,0.00,0.01
+6,3,5,St Kilda,1,95.58,0.01
+6,4,5,St Kilda,1,82.24,
+6,5,5,St Kilda,1,89.88,
+6,6,5,St Kilda,1,97.05,
+7,1,5,St Kilda,1,0.76,0.01
+7,2,5,St Kilda,1,98.95,0.01
+7,3,5,St Kilda,1,99.66,0.01
+7,4,5,St Kilda,1,81.70,
+7,5,5,St Kilda,1,100.70,
+7,6,5,St Kilda,1,90.83,
+8,1,5,St Kilda,1,52.42,0.02
+8,2,5,St Kilda,1,97.25,0.00
+8,3,5,St Kilda,1,94.03,0.01
+8,4,5,St Kilda,1,96.94,
+8,5,5,St Kilda,1,64.29,
+8,6,5,St Kilda,1,77.94,
+9,1,5,St Kilda,1,99.53,0.03
+9,2,5,St Kilda,1,100.41,0.02
+9,3,5,St Kilda,1,102.64,0.02
+9,4,5,St Kilda,1,102.86,
+9,5,5,St Kilda,1,98.84,
+9,6,5,St Kilda,1,98.62,
+10,1,5,St Kilda,1,95.89,0.01
+10,2,5,St Kilda,1,18.01,0.01
+10,3,5,St Kilda,1,65.34,0.01
+10,4,5,St Kilda,1,97.40,
+10,5,5,St Kilda,1,91.42,
+10,6,5,St Kilda,1,94.49,
+11,1,5,St Kilda,1,5.72,0.01
+11,2,5,St Kilda,1,94.23,0.01
+11,3,5,St Kilda,1,98.57,0.01
+11,4,5,St Kilda,1,96.90,
+11,5,5,St Kilda,1,81.92,
+11,6,5,St Kilda,1,88.58,
+12,1,5,St Kilda,1,35.95,0.01
+12,2,5,St Kilda,1,98.19,0.01
+12,3,5,St Kilda,1,96.88,0.00
+12,4,5,St Kilda,1,98.43,
+12,5,5,St Kilda,1,94.87,
+12,6,5,St Kilda,1,100.36,

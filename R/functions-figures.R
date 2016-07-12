@@ -17,6 +17,11 @@ rounded  <-  function(x, rounding=2) {
   format(round(x, rounding), nsmall=rounding)
 }
 
+linearRescale <- function(x, rOut) {
+  p <- (x - min(x)) / (max(x) - min(x))
+  rOut[[1]] + p * (rOut[[2]] - rOut[[1]])
+}
+
 #########
 # FIGURES
 #########
@@ -192,3 +197,72 @@ comparisonsErectCIs  <-  function(mcmcMat = mmfit$BUGSoutput$sims.matrix) {
 	lines(c(2,2), c(avLow[2], avHi[2])) 
 	points(c(1,2), av, pch=16)
 }
+
+plotViolin  <-  function(data, relativeDensCeiling = 0.3) {
+	dens    <-  density(data$X.AS, from=min(data$X.AS), to=max(data$X.AS))
+	quants  <-  quantile(dens$x, probs = c(0.025, 0.975), type = 2)
+	y       <-  dens$y[dens$x >= quants[1] & dens$x <= quants[2]]
+	x       <-  dens$x[dens$x >= quants[1] & dens$x <= quants[2]]
+	y       <-  linearRescale(y, c(0, relativeDensCeiling))
+	negY    <-  unique(data$LocationNum) - y
+	posY    <-  unique(data$LocationNum) + y
+	polygon(c(negY, posY[length(posY):1], negY[1]), c(x, x[length(x):1], x[1]), col=transparentColor('dodgerblue2', 0.6), border=NA)
+	lines(c(negY, posY[length(posY):1], negY[1]), c(x, x[length(x):1], x[1]), col='dodgerblue2')
+	text(unique(data$LocationNum), max(data$X.AS), substitute(a %+-% b, list(a=rounded(mean(data$Flow..m.s.1., na.rm=TRUE), 2), b=rounded(sd(data$Flow..m.s.1., na.rm=TRUE), 2))), adj=c(0.5, 0), cex = 0.8, font = 3)
+}
+
+violinsPlot  <-  function() {
+	par(omi = rep(0.5, 4), cex = 1)
+	plot(NA, xlab='', ylab='Oxygen level (% air sat.)', type='n', axes=FALSE, cex.lab=1.2, xpd=NA, xlim=c(0.5, 5.5), ylim=range(fieldFlow$X.AS))
+	usr       <-  par('usr')
+	rect(usr[1], usr[3], usr[2], usr[4], col='grey90', border=NA)
+	whiteGrid()
+	box()
+	axis(1, at=c(1:5), labels=sort(unique(fieldFlow$Location)), las=3)
+	axis(2, las=1)
+	d_ply(fieldFlow, .(Location), plotViolin)
+}
+
+
+fig1  <-  function() {
+	## Calculate and plot the two histograms
+	par(omi = rep(0.5, 4), cex = 1)
+	plot(NA, xlab='', ylab='Oxygen level (% air sat.)', type='n', axes=FALSE, cex.lab=1.2, xpd=NA, xlim=c(0.5, 5.5), ylim=c(0,160), yaxs='i')
+	box()
+	axis(1, at=seq(1,5.5,0.5), labels=rep(c(0,1),5))
+	axis(2, las=1)
+	meanNative    <-  mean(results$native)
+	meanInvasive  <-  mean(results$invasive)
+	lapply(seq(1.5,4.5,1), function(x) {
+		polygon(c(x+0.005, x+0.2, x+0.2, x+0.005, x+0.005), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
+	})
+	polygon(c(par('usr')[1]+0.005, 1-0.3, 1-0.3, par('usr')[1]+0.005, par('usr')[1]+0.005), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
+	polygon(c(5.505, par('usr')[2]-0.005, par('usr')[2]-0.005, 5.505, 5.505), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
+
+	d_ply(fieldFlow, .(LocationNum), violinPlotAndCumSumHist, meanNative, meanInvasive)
+	lines(par('usr')[1:2], rep(meanNative, 2), lty=2, col='dodgerblue2')
+	lines(par('usr')[1:2], rep(meanInvasive, 2), lty=2, col='tomato')
+}
+
+violinPlotAndCumSumHist  <-  function(data, meanNative, meanInvasive) {
+	d         <-  density(data$X.AS, from=min(data$X.AS), to=max(data$X.AS))
+	y1        <-  d$x
+	x1        <-  d$y
+	x1        <-  linearRescale(x1, c(0, 0.3))
+	negX      <-  unique(data$LocationNum) - x1
+	polygon(c(negX, rep(max(negX), 2)), c(y1, y1[length(y1)], y1[1]), col=transparentColor('grey50', 0.6), border='grey50')
+	text(max(negX), y1[length(y1)]+10, unique(data$Location), adj=c(0.5,0), font=3)
+
+	minBrk    <-  (floor((min(data$X.AS) + 5)/10)*10)-5
+	maxBrk    <-  (ceiling((max(data$X.AS) + 5)/10)*10)-5
+	h         <-  hist(data$X.AS, breaks=seq(minBrk,maxBrk,5), plot=FALSE)
+	x2        <-  unique(data$LocationNum) + linearRescale(cumsum(h$counts), c(0,0.5))
+	for(k in seq_along(x2)) {
+		lines(c(x2[1], rep(x2[k], 2), rep(x2[1], 2)), c(rep(h$breaks[k], 2), rep(h$breaks[k]+5, 2), h$breaks[k]))
+	}
+	percentageNative    <-  length(data$X.AS[data$X.AS <= meanNative])/nrow(data)
+	percentageInvasive  <-  length(data$X.AS[data$X.AS <= meanInvasive])/nrow(data)
+	lines(rep(unique(data$LocationNum)+percentageNative, 2), c(0, maxBrk), lty=2, col='dodgerblue')
+	lines(rep(unique(data$LocationNum)+percentageInvasive, 2), c(0, maxBrk), lty=2, col='tomato')
+}
+
