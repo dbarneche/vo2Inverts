@@ -1,4 +1,5 @@
 library(R2jags)
+library(plyr)
 
 rm(list=ls())
 source('paths.R')
@@ -56,9 +57,13 @@ for(i in 1:nrow(mcmcMat)) {
 # SUMMARY AVERAGES FOR FLAT
 # SPECIES
 ##############################
-cpo2sFlat            <-  exp(mmjagsout['lnB', 'mean'] + mmjagsout[paste0('r[', 1:14, ',2]'), 'mean'])
-avCpo2FlatNative     <-  mean(cpo2sFlat[shapes == 'flat' & status == 'native'])
-avCpo2FlatInvasive   <-  mean(cpo2sFlat[shapes == 'flat' & status == 'invasive'])
+flatNative           <-  shapes == 'flat' & status == 'native'
+flatInvasive         <-  shapes == 'flat' & status == 'invasive'
+cpo2sFlat            <-  adply(mcmcMat, 1, function(x, flatNative, flatInvasive) {
+	allPco2s  <-  exp(x['lnB'] + x[paste0('r[', 1:14, ',2]')])
+	data.frame(meanNative=mean(allPco2s[flatNative]), sdNative=sd(allPco2s[flatNative]), meanInvasive=mean(allPco2s[flatInvasive]), sdInvasive=sd(allPco2s[flatInvasive]))
+}, flatNative=flatNative, flatInvasive=flatInvasive, .id=NULL)
+cpo2sFlat            <-  apply(cpo2sFlat, 2, median)
 	
-rm(list=ls()[!(ls() %in% c('o2tab', 'mmfit', 'mmjagsout', 'results', 'resultsErect', 'avCpo2FlatNative', 'avCpo2FlatInvasive'))])
+rm(list=ls()[!(ls() %in% c('o2tab', 'mmfit', 'mmjagsout', 'results', 'resultsErect', 'cpo2sFlat'))])
 save.image('output/RDatafiles/analyses.RData')
