@@ -48,14 +48,14 @@ michaelisMentenJAGS  <-  function() {
 		satRange  <-  seq(min(x$o2sat), max(x$o2sat), length.out=50)
 		asymp     <-  exp(modelSummary['lnA', 'mean'] + modelSummary[paste0('r[', species,',1]'), 'mean'])
 		denPar    <-  exp(modelSummary['lnB', 'mean'] + modelSummary[paste0('r[', species,',2]'), 'mean'])
-		plot(boundedMassSpecificO2Vol ~ o2sat, data=x, xlab='', ylab='', xlim=c(0,110), ylim=c(0,1.3), type='n', axes=FALSE)
+		plot(boundedO2Vol ~ o2sat, data=x, xlab='', ylab='', xlim=c(0,110), ylim=c(0,1.3), type='n', axes=FALSE)
 		usr       <-  par('usr')
 		rect(usr[1], usr[3], usr[2], usr[4], col='grey90', border=NA)
 		whiteGrid()
 		box()
 		axis(1)
 		axis(2, las=1)
-		points(boundedMassSpecificO2Vol ~ o2sat, data=x, pch=16, col=transparentColor('dodgerblue2', 0.4))
+		points(boundedO2Vol ~ o2sat, data=x, pch=16, col=transparentColor('dodgerblue2', 0.4))
 		yline     <-  (asymp * satRange) / (denPar + satRange)
 		vol100    <-  (asymp * 100) / (denPar + 100)
 		sat50     <-  (vol100*0.5 * denPar) / (asymp - vol100*0.5)
@@ -79,7 +79,7 @@ michaelisMentenJAGS  <-  function() {
 			proportionalLabel(0.03, 1.1, substitute(italic(a) * ' ' * italic(b), list(a=genus, b=spec)), adj=c(0,0.5), xpd=NA)
 	}, fullModel=mmfit, modelSummary=mmjagsout)
 	mtext(substitute('PO'[2]*' (%)'), side=1, line=1.5, outer=TRUE, cex=1.3)
-	mtext(substitute('Relative mass-specific '*dot('V')*'O'[2]*' [0, 1]'), side=2, line=1, outer=TRUE, cex=1.3)
+	mtext(substitute('Relative '*dot('V')*'O'[2]*' [0, 1]'), side=2, line=1, outer=TRUE, cex=1.3)
 }
 
 comparisons  <-  function(mcmcMat = mmfit$BUGSoutput$sims.matrix) {

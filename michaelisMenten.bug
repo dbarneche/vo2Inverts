@@ -21,8 +21,8 @@ model {
 	varR[1:2, 1:2]  <-  inverse(tauR[ , ])
 
 	# non-linear regression for rates
-	for(i in 1:length(boundedMassSpecificO2Vol)) {
-		boundedMassSpecificO2Vol[i]  ~   dnorm(mu[i], tauMu)
+	for(i in 1:length(boundedO2Vol)) {
+		boundedO2Vol[i]  ~   dnorm(mu[i], tauMu)
 		mu[i]   <-  (exp(lnA + r[id[i],1]) * o2sat[i]) / (exp(lnB + r[id[i],2]) + o2sat[i])
 	}
 }

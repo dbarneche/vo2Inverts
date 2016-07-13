@@ -9,7 +9,7 @@ source('database.R')
 # MICHAELIS-MENTEN MODEL IN JAGS
 #################################
 set.seed(1)
-mmJags       <-  list('boundedMassSpecificO2Vol'=o2tab$boundedMassSpecificO2Vol, 'id'=o2tab$sppNum, 'o2sat'=o2tab$o2sat)
+mmJags       <-  list('boundedO2Vol'=o2tab$boundedO2Vol, 'id'=o2tab$sppNum, 'o2sat'=o2tab$o2sat)
 mminits1     <-  list(lnA = 0.5,  lnB = 2, tauMu=1)
 mminits2     <-  list(lnA = 0,    lnB = 5, tauMu=3)
 mminits3     <-  list(lnA = -0.2, lnB = 3, tauMu=5)
