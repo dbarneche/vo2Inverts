@@ -1,5 +1,5 @@
 ```{r, results='hide', warnings=FALSE, echo=FALSE, message=FALSE}
-load('../output/RDatafiles/analyses.RData')
+load('../output/RDatafiles/analyses_resultsAirSat@v50.RData')
 source('../R/functions-analyses.R')
 cleanbib()
 myRefs   <-  listBibs()

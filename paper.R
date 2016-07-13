@@ -5,7 +5,7 @@ library(plyr)
 
 rm(list=ls())
 source('R/functions-analyses.R')
-load('output/RDatafiles/analyses.RData')
+load('output/RDatafiles/analyses_resultsAirSat@v50.RData')
 
 # to .md
 knit('text/lagos_et_al.Rmd', output=file.path(getwd(), 'text/lagos_et_al.md'), quiet=TRUE, encoding = 'utf-8')

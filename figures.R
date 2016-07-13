@@ -8,7 +8,7 @@ rm(list=ls())
 source('paths.R')
 source('R/functions-analyses.R')
 source('R/functions-figures.R')
-load('output/RDatafiles/analyses.RData')
+load('output/RDatafiles/analyses_resultsAirSat@v50.RData')
 
 toPdf(comparisons(), 'output/figures/comparisons.pdf', width=9.5, height=4.5)
 embed_fonts('output/figures/comparisons.pdf')

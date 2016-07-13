@@ -32,7 +32,10 @@ resultsErect         <-  data.frame(matrix(0, nrow(mcmcMat), 4))
 names(resultsErect)  <-  c('invasive', 'invasive_se', 'native', 'native_se')
 
 for(i in 1:nrow(mcmcMat)) {
-	cpo2s       <-  exp(mcmcMat[i,'lnB'] + mcmcMat[i,paste0('r[', 1:14, ',2]')])
+	asymp       <-  exp(mcmcMat[i,'lnA'] + mcmcMat[i,paste0('r[', 1:14, ',1]')])
+	denPar      <-  exp(mcmcMat[i,'lnB'] + mcmcMat[i,paste0('r[', 1:14, ',2]')])
+	vol100      <-  (asymp * 100) / (denPar + 100)
+	cpo2s       <-  (vol100*0.5 * denPar) / (asymp - vol100*0.5)
 	cpo2sErect  <-  cpo2s[shapes == 'erect']
 	statErect   <-  status[shapes == 'erect']
 	mod1        <-  lm(cpo2s ~ status - 1)
@@ -60,10 +63,13 @@ for(i in 1:nrow(mcmcMat)) {
 flatNative           <-  shapes == 'flat' & status == 'native'
 flatInvasive         <-  shapes == 'flat' & status == 'invasive'
 cpo2sFlat            <-  adply(mcmcMat, 1, function(x, flatNative, flatInvasive) {
-	allPco2s  <-  exp(x['lnB'] + x[paste0('r[', 1:14, ',2]')])
+	asymp       <-  exp(x['lnA'] + x[paste0('r[', 1:14, ',1]')])
+	denPar      <-  exp(x['lnB'] + x[paste0('r[', 1:14, ',2]')])
+	vol100      <-  (asymp * 100) / (denPar + 100)
+	allPco2s    <-  (vol100*0.5 * denPar) / (asymp - vol100*0.5)
 	data.frame(meanNative=mean(allPco2s[flatNative]), sdNative=sd(allPco2s[flatNative]), meanInvasive=mean(allPco2s[flatInvasive]), sdInvasive=sd(allPco2s[flatInvasive]))
 }, flatNative=flatNative, flatInvasive=flatInvasive, .id=NULL)
 cpo2sFlat            <-  apply(cpo2sFlat, 2, median)
 	
 rm(list=ls()[!(ls() %in% c('o2tab', 'mmfit', 'mmjagsout', 'results', 'resultsErect', 'cpo2sFlat'))])
-save.image('output/RDatafiles/analyses.RData')
+save.image('output/RDatafiles/analyses_resultsAirSat@v50.RData')
