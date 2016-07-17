@@ -174,30 +174,8 @@ comparisonsErectCIs  <-  function(mcmcMat = mmfit$BUGSoutput$sims.matrix) {
 	points(c(1,2), av, pch=16)
 }
 
-plotViolin  <-  function(data, relativeDensCeiling = 0.3) {
-	dens    <-  density(data$X.AS, from=min(data$X.AS), to=max(data$X.AS))
-	quants  <-  quantile(dens$x, probs = c(0.025, 0.975), type = 2)
-	y       <-  dens$y[dens$x >= quants[1] & dens$x <= quants[2]]
-	x       <-  dens$x[dens$x >= quants[1] & dens$x <= quants[2]]
-	y       <-  linearRescale(y, c(0, relativeDensCeiling))
-	negY    <-  unique(data$LocationNum) - y
-	posY    <-  unique(data$LocationNum) + y
-	polygon(c(negY, posY[length(posY):1], negY[1]), c(x, x[length(x):1], x[1]), col=transparentColor('dodgerblue2', 0.6), border=NA)
-	lines(c(negY, posY[length(posY):1], negY[1]), c(x, x[length(x):1], x[1]), col='dodgerblue2')
-	text(unique(data$LocationNum), max(data$X.AS), substitute(a %+-% b, list(a=rounded(mean(data$Flow..m.s.1., na.rm=TRUE), 2), b=rounded(sd(data$Flow..m.s.1., na.rm=TRUE), 2))), adj=c(0.5, 0), cex = 0.8, font = 3)
-}
-
-violinsPlot  <-  function() {
-	par(omi = rep(0.5, 4), cex = 1)
-	plot(NA, xlab='', ylab='Oxygen level (% air sat.)', type='n', axes=FALSE, cex.lab=1.2, xpd=NA, xlim=c(0.5, 5.5), ylim=range(fieldFlow$X.AS))
-	box()
-	axis(1, at=c(1:5), labels=sort(unique(fieldFlow$Location)), las=3)
-	axis(2, las=1)
-	d_ply(fieldFlow, .(Location), plotViolin)
-}
-
-
 fig1  <-  function() {
+	fieldFlow  <-  readFile('data/fieldOxygenFlow.csv')
 	## Calculate and plot the two histograms
 	par(omi = rep(0.5, 4), cex = 1)
 	plot(NA, xlab='', ylab='Oxygen level (% air sat.)', type='n', axes=FALSE, cex.lab=1.2, xpd=NA, xlim=c(0.5, 5.5), ylim=c(0,160), yaxs='i')
