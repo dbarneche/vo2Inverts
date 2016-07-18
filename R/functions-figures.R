@@ -178,7 +178,7 @@ fig1  <-  function() {
 	fieldFlow  <-  readFile('data/fieldOxygenFlow.csv')
 	## Calculate and plot the two histograms
 	par(omi = rep(0.5, 4), cex = 1)
-	plot(NA, xlab='', ylab='Oxygen level (% air sat.)', type='n', axes=FALSE, cex.lab=1.2, xpd=NA, xlim=c(0.5, 5.5), ylim=c(0,160), yaxs='i')
+	plot(NA, xlab='', ylab='Oxygen level (% air sat.)', type='n', axes=FALSE, cex.lab=1.2, xpd=NA, xlim=c(0.5, 5.5), ylim=c(0,170), yaxs='i')
 	box()
 	axis(1, at=seq(1,5.5,0.5), labels=rep(c(0,1),5))
 	axis(2, las=1)
@@ -212,7 +212,7 @@ violinPlotAndCumSumHist  <-  function(data, meanNative, meanInvasive) {
 	x1        <-  linearRescale(x1, c(0, 0.3))
 	negX      <-  unique(data$LocationNum) - x1
 	polygon(c(negX, rep(max(negX), 2)), c(y1, y1[length(y1)], y1[1]), col=transparentColor('grey50', 0.6), border='grey50')
-	text(max(negX), y1[length(y1)]+10, unique(data$Location), adj=c(0.5,0), font=3)
+	text(max(negX), 160, unique(data$Location), adj=c(0.5,0), font=3)
 
 	minBrk    <-  (floor((min(data$X.AS) + 5)/10)*10)-5
 	maxBrk    <-  (ceiling((max(data$X.AS) + 5)/10)*10)-5
