@@ -30,5 +30,3 @@ embed_fonts('output/figures/massScaling.pdf')
 
 toPdf(fig1(), 'output/figures/fig1.pdf', width=11.5, height=5.7)
 embed_fonts('output/figures/fig1.pdf')
-
-

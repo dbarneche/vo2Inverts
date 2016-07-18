@@ -182,8 +182,18 @@ fig1  <-  function() {
 	box()
 	axis(1, at=seq(1,5.5,0.5), labels=rep(c(0,1),5))
 	axis(2, las=1)
-	meanNative    <-  mean(results$native)
-	meanInvasive  <-  mean(results$invasive)
+	
+	mcmcMat              <-  mmfit$BUGSoutput$sims.matrix
+	status               <-  o2tab$status[match(1:14, o2tab$sppNum)]
+	dat                  <-  data.frame()
+	for(i in 1:nrow(mcmcMat)) {
+		denPar      <-  exp(mcmcMat[i,'lnB'] + mcmcMat[i,paste0('r[', 1:14, ',2]')])
+		cutOffs     <-  cutOffSolution97(denPar)
+		dat         <-  rbind(dat, data.frame(invasive=mean(cutOffs[status == 'invasive']), native=mean(cutOffs[status == 'native'])))
+	}	
+
+	meanNative    <-  mean(dat$native)
+	meanInvasive  <-  mean(dat$invasive)
 	lapply(seq(1.5,4.5,1), function(x) {
 		polygon(c(x+0.005, x+0.2, x+0.2, x+0.005, x+0.005), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
 	})
