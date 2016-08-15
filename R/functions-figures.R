@@ -13,32 +13,101 @@ toPdf <- function(expr, filename, ...) {
   toDev(expr, pdf, filename, ...)
 }
 
-rounded  <-  function(x, rounding=2) {
-  format(round(x, rounding), nsmall=rounding)
-}
-
 linearRescale <- function(x, rOut) {
   p <- (x - min(x)) / (max(x) - min(x))
   rOut[[1]] + p * (rOut[[2]] - rOut[[1]])
 }
 
+violinPlotAndCumSumHist  <-  function(data, meanNative, meanInvasive) {
+	d         <-  density(data$X.AS, from=min(data$X.AS), to=max(data$X.AS))
+	y1        <-  d$x
+	x1        <-  d$y
+	x1        <-  linearRescale(x1, c(0, 0.3))
+	negX      <-  unique(data$LocationNum) - x1
+	polygon(c(negX, rep(max(negX), 2)), c(y1, y1[length(y1)], y1[1]), col=transparentColor('grey50', 0.6), border='grey50')
+	text(max(negX), 160, unique(data$Location), adj=c(0.5,0), font=3)
+
+	minBrk    <-  (floor((min(data$X.AS) + 5)/10)*10)-5
+	maxBrk    <-  (ceiling((max(data$X.AS) + 5)/10)*10)-5
+	h         <-  hist(data$X.AS, breaks=seq(minBrk,maxBrk,5), plot=FALSE)
+	x2        <-  unique(data$LocationNum) + linearRescale(cumsum(h$counts), c(0,0.5))
+	sapply(seq_along(x2), function(k, x2) {lines(c(x2[1], rep(x2[k], 2), rep(x2[1], 2)), c(rep(h$breaks[k], 2), rep(h$breaks[k]+5, 2), h$breaks[k]))}, x2=x2)
+	percentageNative    <-  length(data$X.AS[data$X.AS <= meanNative])/nrow(data)
+	percentageInvasive  <-  length(data$X.AS[data$X.AS <= meanInvasive])/nrow(data)
+	cat(unique(data$LocationNum), 'native:', percentageNative, 'invasive:', percentageInvasive, '\n')
+	lines(rep(unique(data$LocationNum)+percentageNative/2, 2), c(0, maxBrk), lty=2, col='dodgerblue')
+	lines(rep(unique(data$LocationNum)+percentageInvasive/2, 2), c(0, maxBrk), lty=2, col='tomato')
+}
+
 #########
 # FIGURES
 #########
-massScaling  <-  function() {
-	spid   <-  read.csv('data/speciesID.csv', header=TRUE, stringsAsFactors=FALSE)
-	maxO2  <-  daply(o2tab, .(column), function(x)mean(x$o2volume[x$o2sat >= quantile(x$o2sat, probs=0.99, type=2)]))
-	par(omi=rep(0.5, 4), cex=1)
-	x  <-  log(spid$dry_mass_g)
-	y  <-  log(maxO2)
-	plot(x, y, xlab='ln dry mass (mg)', ylab=substitute('ln '*dot('V')*'O'[2]*' (ml h'^{-1}*')'), type='n', axes=FALSE, cex.lab=1.2, xpd=NA)
+fig1  <-  function() {
+	fieldFlow  <-  readFile('data/fieldOxygenFlow.csv')
+	## Calculate and plot the two histograms
+	par(omi = rep(0.5, 4), cex = 1)
+	plot(NA, xlab='', ylab='Oxygen level (% air sat.)', type='n', axes=FALSE, cex.lab=1.2, xpd=NA, xlim=c(0.5, 5.5), ylim=c(0,170), yaxs='i')
 	box()
-	axis(1)
+	axis(1, at=seq(1,5.5,0.5), labels=rep(c(0,1),5))
 	axis(2, las=1)
-	points(y ~ x, pch=16, col=transparentColor('dodgerblue2', 0.8), cex=1.5)
+	
+	mcmcMat              <-  mmfit$BUGSoutput$sims.matrix
+	status               <-  o2tab$status[match(1:14, o2tab$sppNum)]
+	dat                  <-  data.frame()
+	for(i in 1:nrow(mcmcMat)) {
+		asymp       <-  exp(mcmcMat[i,'lnA'] + mcmcMat[i,paste0('r[', 1:14, ',1]')])
+		denPar      <-  exp(mcmcMat[i,'lnB'] + mcmcMat[i,paste0('r[', 1:14, ',2]')])
+		vol100      <-  (asymp * 100) / (denPar + 100)
+		cpo2s5      <-  (vol100*0.95 * denPar) / (asymp - vol100*0.95)
+		dat         <-  rbind(dat, data.frame(invasive=mean(cpo2s5[status == 'invasive']), native=mean(cpo2s5[status == 'native'])))
+	}
+
+	meanNative    <-  mean(dat$native)
+	meanInvasive  <-  mean(dat$invasive)
+	lapply(seq(1.5,4.5,1), function(x) {
+		polygon(c(x+0.005, x+0.2, x+0.2, x+0.005, x+0.005), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
+	})
+	polygon(c(par('usr')[1]+0.005, 1-0.3, 1-0.3, par('usr')[1]+0.005, par('usr')[1]+0.005), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
+	polygon(c(5.505, par('usr')[2]-0.005, par('usr')[2]-0.005, 5.505, 5.505), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
+
+	d_ply(fieldFlow, .(LocationNum), violinPlotAndCumSumHist, meanNative, meanInvasive)
+	lines(par('usr')[1:2], rep(meanNative, 2), lty=2, col='dodgerblue2')
+	lines(par('usr')[1:2], rep(meanInvasive, 2), lty=2, col='tomato')
 }
 
-michaelisMentenJAGS  <-  function() {
+fig2  <-  function(mcmcMat = mmfit$BUGSoutput$sims.matrix) {
+	par(mfrow=c(1, 2), mai=c(1.02,1.12,0.82,0.30), omi=c(0,0.25,0,0.25), cex.axis=1.2, cex.lab=1.4, xpd=NA)
+	x  <-  jitter(rep(c(1,2), each=nrow(mcmcMat)))
+	y  <-  c(results$invasive, results$native)
+	plot(x, y, axes=FALSE, type='n', xlab='Status', ylab=substitute('Critical PO'[2]*' (%)'), xlim=c(0.5,2.5), ylim=c(5, 20))
+	box()
+	axis(1, at=c(1,2), labels=c('Invasive', 'Native'))
+	axis(2, las=1)
+	points(x, y, pch=16, col=transparentColor(rep(c('tomato', 'dodgerblue2'), each=nrow(mcmcMat)), 0.1), cex=1.3)
+
+	y  <-  c(results$erect, results$flat)
+	par(mai=c(1.02,0.52,0.82,0.90))
+	plot(x, y, axes=FALSE, type='n', xlab='Shape', ylab='', xlim=c(0.5,2.5), ylim=c(5, 35))
+	box()
+	axis(1, at=c(1,2), labels=c('Erect', 'Flat'))
+	axis(2, las=1, labels=NA)
+	points(x, y, pch=16, col=transparentColor(rep(c('tomato', 'dodgerblue2'), each=nrow(mcmcMat)), 0.1), cex=1.3)
+}
+
+fig3  <-  function(mcmcMat = mmfit$BUGSoutput$sims.matrix) {
+	par(cex=1, omi=rep(0.5, 4), cex.axis=1.2, cex.lab=1.4)
+	x   <-  jitter(rep(c(1,2), each=nrow(mcmcMat)))
+	cl  <-  transparentColor(rep(c('tomato', 'dodgerblue2'), each=nrow(mcmcMat)), 0.1)
+	y   <-  c(resultsErect$invasive, resultsErect$native)
+	plot(x, y, axes=FALSE, type='n', xlab='Status', ylab=substitute('Critical PO'[2]*' (%)'%+-%' S.E.'), xlim=c(0.5,2.5), ylim=c(5, 20), xpd=NA)
+	proportionalLabel(0.5, 1.1, 'Erect species', adj=c(0.5, 0.5), xpd=NA, font=3, cex=1.4)
+	box()
+	axis(1, at=c(1,2), labels=c('Invasive', 'Native'))
+	axis(2, las=1)
+	points(x, y, pch=16, col=cl, cex=1.3)
+}
+
+figS  <-  function() {
 	par(mfrow=c(5,3), omi=c(1.1,1.1,0.1,0.1), mai=rep(0.3,4))
 	d_ply(o2tab, .(species), function(x, fullModel, modelSummary) {
 		species   <-  unique(x$sppNum)
@@ -75,156 +144,3 @@ michaelisMentenJAGS  <-  function() {
 	mtext('Oxygen level (% air saturation)', side=1, line=1.5, outer=TRUE, cex=1.3)
 	mtext(substitute('Relative '*dot('V')*'O'[2]*' [0, 1]'), side=2, line=1, outer=TRUE, cex=1.3)
 }
-
-comparisons  <-  function(mcmcMat = mmfit$BUGSoutput$sims.matrix) {
-	par(mfrow=c(1, 2), mai=c(1.02,1.12,0.82,0.30), omi=c(0,0.25,0,0.25), cex.axis=1.2, cex.lab=1.4, xpd=NA)
-	x  <-  jitter(rep(c(1,2), each=nrow(mcmcMat)))
-	y  <-  c(results$invasive, results$native)
-	plot(x, y, axes=FALSE, type='n', xlab='Status', ylab=substitute('Critical PO'[2]*' (%)'), xlim=c(0.5,2.5), ylim=c(5, 20))
-	box()
-	axis(1, at=c(1,2), labels=c('Invasive', 'Native'))
-	axis(2, las=1)
-	points(x, y, pch=16, col=transparentColor(rep(c('tomato', 'dodgerblue2'), each=nrow(mcmcMat)), 0.1), cex=1.3)
-
-	y  <-  c(results$erect, results$flat)
-	par(mai=c(1.02,0.52,0.82,0.90))
-	plot(x, y, axes=FALSE, type='n', xlab='Shape', ylab='', xlim=c(0.5,2.5), ylim=c(5, 35))
-	box()
-	axis(1, at=c(1,2), labels=c('Erect', 'Flat'))
-	axis(2, las=1, labels=NA)
-	points(x, y, pch=16, col=transparentColor(rep(c('tomato', 'dodgerblue2'), each=nrow(mcmcMat)), 0.1), cex=1.3)
-}
-
-comparisonsCIs  <-  function(mcmcMat = mmfit$BUGSoutput$sims.matrix) {
-	par(mfrow=c(1, 2), mai=c(1.02,1.12,0.82,0.30), omi=c(0,0.25,0,0.25), cex.axis=1.2, cex.lab=1.4, xpd=NA)
-	x   <-  jitter(rep(c(1,2), each=nrow(mcmcMat)))
-	cl  <-  transparentColor(rep(c('tomato', 'dodgerblue2'), each=nrow(mcmcMat)), 0.1)
-	y   <-  c(results$invasive, results$native)
-	y1  <-  y - c(results$invasive_se, results$native_se)
-	y2  <-  y + c(results$invasive_se, results$native_se)
-	plot(x, y, axes=FALSE, type='n', xlab='Status', ylab=substitute('Critical PO'[2]*' (%)'%+-%' S.E.'), xlim=c(0.5,2.5), ylim=c(5, 20))
-	box()
-	axis(1, at=c(1,2), labels=c('Invasive', 'Native'))
-	axis(2, las=1)
-	for(i in seq_along(x)) {
-		lines(rep(x[i], 2), c(y1[i], y2[i]), pch=16, col=cl[i])
-	}
-	points(x, y, pch=21, col=transparentColor('grey30', 0.2), bg=cl, cex=1.3)
-	av     <-  tapply(y, rep(c(1,2), each=nrow(mcmcMat)), median)
-	avLow  <-  tapply(y1, rep(c(1,2), each=nrow(mcmcMat)), median)
-	avHi   <-  tapply(y2, rep(c(1,2), each=nrow(mcmcMat)), median)
-	lines(c(1,1), c(avLow[1], avHi[1])) 
-	lines(c(2,2), c(avLow[2], avHi[2])) 
-	points(c(1,2), av, pch=16)
-
-	y   <-  c(results$erect, results$flat)
-	y1  <-  y - c(results$erect_se, results$flat_se)
-	y2  <-  y + c(results$erect_se, results$flat_se)
-	par(mai=c(1.02,0.52,0.82,0.90))
-	plot(x, y, axes=FALSE, type='n', xlab='Shape', ylab='', xlim=c(0.5,2.5), ylim=c(-5, 50))
-	box()
-	axis(1, at=c(1,2), labels=c('Erect', 'Flat'))
-	axis(2, las=1, labels=NA)
-	for(i in seq_along(x)) {
-		lines(rep(x[i], 2), c(y1[i], y2[i]), pch=16, col=cl[i])
-	}
-	points(x, y, pch=21, col=transparentColor('grey30', 0.2), bg=cl, cex=1.3)
-	av     <-  tapply(y, rep(c(1,2), each=nrow(mcmcMat)), median)
-	avLow  <-  tapply(y1, rep(c(1,2), each=nrow(mcmcMat)), median)
-	avHi   <-  tapply(y2, rep(c(1,2), each=nrow(mcmcMat)), median)
-	lines(c(1,1), c(avLow[1], avHi[1])) 
-	lines(c(2,2), c(avLow[2], avHi[2])) 
-	points(c(1,2), av, pch=16)
-}
-
-comparisonsErect  <-  function(mcmcMat = mmfit$BUGSoutput$sims.matrix) {
-	par(cex=1, omi=rep(0.5, 4), cex.axis=1.2, cex.lab=1.4)
-	x   <-  jitter(rep(c(1,2), each=nrow(mcmcMat)))
-	cl  <-  transparentColor(rep(c('tomato', 'dodgerblue2'), each=nrow(mcmcMat)), 0.1)
-	y   <-  c(resultsErect$invasive, resultsErect$native)
-	plot(x, y, axes=FALSE, type='n', xlab='Status', ylab=substitute('Critical PO'[2]*' (%)'%+-%' S.E.'), xlim=c(0.5,2.5), ylim=c(5, 20), xpd=NA)
-	proportionalLabel(0.5, 1.1, 'Erect species', adj=c(0.5, 0.5), xpd=NA, font=3, cex=1.4)
-	box()
-	axis(1, at=c(1,2), labels=c('Invasive', 'Native'))
-	axis(2, las=1)
-	points(x, y, pch=16, col=cl, cex=1.3)
-}
-
-comparisonsErectCIs  <-  function(mcmcMat = mmfit$BUGSoutput$sims.matrix) {
-	par(cex=1, omi=rep(0.5, 4), cex.axis=1.2, cex.lab=1.4)
-	x   <-  jitter(rep(c(1,2), each=nrow(mcmcMat)))
-	cl  <-  transparentColor(rep(c('tomato', 'dodgerblue2'), each=nrow(mcmcMat)), 0.1)
-	y   <-  c(resultsErect$invasive, resultsErect$native)
-	y1  <-  y - c(resultsErect$invasive_se, resultsErect$native_se)
-	y2  <-  y + c(resultsErect$invasive_se, resultsErect$native_se)
-	plot(x, y, axes=FALSE, type='n', xlab='Status', ylab=substitute('Critical PO'[2]*' (%)'%+-%' S.E.'), xlim=c(0.5,2.5), ylim=c(5, 20), xpd=NA)
-	proportionalLabel(0.5, 1.1, 'Erect species', adj=c(0.5, 0.5), xpd=NA, font=3, cex=1.4)
-	box()
-	axis(1, at=c(1,2), labels=c('Invasive', 'Native'))
-	axis(2, las=1)
-	for(i in seq_along(x)) {
-		lines(rep(x[i], 2), c(y1[i], y2[i]), pch=16, col=cl[i])
-	}
-	points(x, y, pch=21, col=transparentColor('grey30', 0.2), bg=cl, cex=1.3)
-	av     <-  tapply(y, rep(c(1,2), each=nrow(mcmcMat)), median)
-	avLow  <-  tapply(y1, rep(c(1,2), each=nrow(mcmcMat)), median)
-	avHi   <-  tapply(y2, rep(c(1,2), each=nrow(mcmcMat)), median)
-	lines(c(1,1), c(avLow[1], avHi[1])) 
-	lines(c(2,2), c(avLow[2], avHi[2])) 
-	points(c(1,2), av, pch=16)
-}
-
-fig1  <-  function() {
-	fieldFlow  <-  readFile('data/fieldOxygenFlow.csv')
-	## Calculate and plot the two histograms
-	par(omi = rep(0.5, 4), cex = 1)
-	plot(NA, xlab='', ylab='Oxygen level (% air sat.)', type='n', axes=FALSE, cex.lab=1.2, xpd=NA, xlim=c(0.5, 5.5), ylim=c(0,170), yaxs='i')
-	box()
-	axis(1, at=seq(1,5.5,0.5), labels=rep(c(0,1),5))
-	axis(2, las=1)
-	
-	mcmcMat              <-  mmfit$BUGSoutput$sims.matrix
-	status               <-  o2tab$status[match(1:14, o2tab$sppNum)]
-	dat                  <-  data.frame()
-	for(i in 1:nrow(mcmcMat)) {
-		asymp       <-  exp(mcmcMat[i,'lnA'] + mcmcMat[i,paste0('r[', 1:14, ',1]')])
-		denPar      <-  exp(mcmcMat[i,'lnB'] + mcmcMat[i,paste0('r[', 1:14, ',2]')])
-		vol100      <-  (asymp * 100) / (denPar + 100)
-		cpo2s5      <-  (vol100*0.95 * denPar) / (asymp - vol100*0.95)
-		dat         <-  rbind(dat, data.frame(invasive=mean(cpo2s5[status == 'invasive']), native=mean(cpo2s5[status == 'native'])))
-	}
-
-	meanNative    <-  mean(dat$native)
-	meanInvasive  <-  mean(dat$invasive)
-	lapply(seq(1.5,4.5,1), function(x) {
-		polygon(c(x+0.005, x+0.2, x+0.2, x+0.005, x+0.005), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
-	})
-	polygon(c(par('usr')[1]+0.005, 1-0.3, 1-0.3, par('usr')[1]+0.005, par('usr')[1]+0.005), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
-	polygon(c(5.505, par('usr')[2]-0.005, par('usr')[2]-0.005, 5.505, 5.505), c(-5,-5, 5, 5, -5), col='white', border=NA, xpd=NA)
-
-	d_ply(fieldFlow, .(LocationNum), violinPlotAndCumSumHist, meanNative, meanInvasive)
-	lines(par('usr')[1:2], rep(meanNative, 2), lty=2, col='dodgerblue2')
-	lines(par('usr')[1:2], rep(meanInvasive, 2), lty=2, col='tomato')
-}
-
-violinPlotAndCumSumHist  <-  function(data, meanNative, meanInvasive) {
-	d         <-  density(data$X.AS, from=min(data$X.AS), to=max(data$X.AS))
-	y1        <-  d$x
-	x1        <-  d$y
-	x1        <-  linearRescale(x1, c(0, 0.3))
-	negX      <-  unique(data$LocationNum) - x1
-	polygon(c(negX, rep(max(negX), 2)), c(y1, y1[length(y1)], y1[1]), col=transparentColor('grey50', 0.6), border='grey50')
-	text(max(negX), 160, unique(data$Location), adj=c(0.5,0), font=3)
-
-	minBrk    <-  (floor((min(data$X.AS) + 5)/10)*10)-5
-	maxBrk    <-  (ceiling((max(data$X.AS) + 5)/10)*10)-5
-	h         <-  hist(data$X.AS, breaks=seq(minBrk,maxBrk,5), plot=FALSE)
-	x2        <-  unique(data$LocationNum) + linearRescale(cumsum(h$counts), c(0,0.5))
-	sapply(seq_along(x2), function(k, x2) {lines(c(x2[1], rep(x2[k], 2), rep(x2[1], 2)), c(rep(h$breaks[k], 2), rep(h$breaks[k]+5, 2), h$breaks[k]))}, x2=x2)
-	percentageNative    <-  length(data$X.AS[data$X.AS <= meanNative])/nrow(data)
-	percentageInvasive  <-  length(data$X.AS[data$X.AS <= meanInvasive])/nrow(data)
-	cat(unique(data$LocationNum), 'native:', percentageNative, 'invasive:', percentageInvasive, '\n')
-	lines(rep(unique(data$LocationNum)+percentageNative/2, 2), c(0, maxBrk), lty=2, col='dodgerblue')
-	lines(rep(unique(data$LocationNum)+percentageInvasive/2, 2), c(0, maxBrk), lty=2, col='tomato')
-}
-
