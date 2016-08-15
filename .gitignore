@@ -2,3 +2,4 @@ output/
 .DS_Store
 *.RData
 library.bib
+*tmp_*
