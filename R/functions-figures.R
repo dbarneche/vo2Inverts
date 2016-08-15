@@ -72,7 +72,7 @@ michaelisMentenJAGS  <-  function() {
 		else
 			proportionalLabel(0.03, 1.1, substitute(italic(a) * ' ' * italic(b), list(a=genus, b=spec)), adj=c(0,0.5), xpd=NA)
 	}, fullModel=mmfit, modelSummary=mmjagsout)
-	mtext(substitute('PO'[2]*' (%)'), side=1, line=1.5, outer=TRUE, cex=1.3)
+	mtext('Oxygen level (% air saturation)', side=1, line=1.5, outer=TRUE, cex=1.3)
 	mtext(substitute('Relative '*dot('V')*'O'[2]*' [0, 1]'), side=2, line=1, outer=TRUE, cex=1.3)
 }
 
@@ -187,10 +187,12 @@ fig1  <-  function() {
 	status               <-  o2tab$status[match(1:14, o2tab$sppNum)]
 	dat                  <-  data.frame()
 	for(i in 1:nrow(mcmcMat)) {
+		asymp       <-  exp(mcmcMat[i,'lnA'] + mcmcMat[i,paste0('r[', 1:14, ',1]')])
 		denPar      <-  exp(mcmcMat[i,'lnB'] + mcmcMat[i,paste0('r[', 1:14, ',2]')])
-		cutOffs     <-  cutOffSolution97(denPar)
-		dat         <-  rbind(dat, data.frame(invasive=mean(cutOffs[status == 'invasive']), native=mean(cutOffs[status == 'native'])))
-	}	
+		vol100      <-  (asymp * 100) / (denPar + 100)
+		cpo2s5      <-  (vol100*0.95 * denPar) / (asymp - vol100*0.95)
+		dat         <-  rbind(dat, data.frame(invasive=mean(cpo2s5[status == 'invasive']), native=mean(cpo2s5[status == 'native'])))
+	}
 
 	meanNative    <-  mean(dat$native)
 	meanInvasive  <-  mean(dat$invasive)
@@ -218,12 +220,11 @@ violinPlotAndCumSumHist  <-  function(data, meanNative, meanInvasive) {
 	maxBrk    <-  (ceiling((max(data$X.AS) + 5)/10)*10)-5
 	h         <-  hist(data$X.AS, breaks=seq(minBrk,maxBrk,5), plot=FALSE)
 	x2        <-  unique(data$LocationNum) + linearRescale(cumsum(h$counts), c(0,0.5))
-	for(k in seq_along(x2)) {
-		lines(c(x2[1], rep(x2[k], 2), rep(x2[1], 2)), c(rep(h$breaks[k], 2), rep(h$breaks[k]+5, 2), h$breaks[k]))
-	}
+	sapply(seq_along(x2), function(k, x2) {lines(c(x2[1], rep(x2[k], 2), rep(x2[1], 2)), c(rep(h$breaks[k], 2), rep(h$breaks[k]+5, 2), h$breaks[k]))}, x2=x2)
 	percentageNative    <-  length(data$X.AS[data$X.AS <= meanNative])/nrow(data)
 	percentageInvasive  <-  length(data$X.AS[data$X.AS <= meanInvasive])/nrow(data)
-	lines(rep(unique(data$LocationNum)+percentageNative, 2), c(0, maxBrk), lty=2, col='dodgerblue')
-	lines(rep(unique(data$LocationNum)+percentageInvasive, 2), c(0, maxBrk), lty=2, col='tomato')
+	cat(unique(data$LocationNum), 'native:', percentageNative, 'invasive:', percentageInvasive, '\n')
+	lines(rep(unique(data$LocationNum)+percentageNative/2, 2), c(0, maxBrk), lty=2, col='dodgerblue')
+	lines(rep(unique(data$LocationNum)+percentageInvasive/2, 2), c(0, maxBrk), lty=2, col='tomato')
 }
 
