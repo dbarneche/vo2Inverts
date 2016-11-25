@@ -21,7 +21,7 @@ for(i in 1:nrow(mcmcMat)) {
 	asymp       <-  exp(mcmcMat[i,'lnA'] + mcmcMat[i,paste0('r[', 1:14, ',1]')])
 	denPar      <-  exp(mcmcMat[i,'lnB'] + mcmcMat[i,paste0('r[', 1:14, ',2]')])
 	vol100      <-  (asymp * 100) / (denPar + 100)
-	cpo2s       <-  (vol100*0.5 * denPar) / (asymp - vol100*0.5)
+	cpo2s       <-  (vol100 * 0.5 * denPar) / (asymp - vol100 * 0.5) # same as cpo2s   <-  (-1 * denPar) / (1 - asymp / (vol100 * 0.5))
 	cpo2sErect  <-  cpo2s[shapes == 'erect']
 	statErect   <-  status[shapes == 'erect']
 	mod1        <-  lm(cpo2s ~ status - 1)
