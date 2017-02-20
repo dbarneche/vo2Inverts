@@ -1,0 +1,73 @@
+packages:
+  - LoLinR
+  - plyr
+  - R2jags
+
+sources:
+  - R/functions-analyses.R
+  - R/functions-figures.R
+  - R/functions-tables.R
+
+plot_options:
+  fig1Size:
+    width: 7.5
+    height: 10
+  fig2Size:
+    width: 11.5
+    height: 4.5
+  fig3Size:
+    width: 11.5
+    height: 5.7
+
+targets:
+  all:
+    depends:
+      - output/figures/fig1.pdf
+      - output/figures/fig2.pdf
+      - cpo2sFlat
+      - output/tables/table1.csv
+      - output/tables/table2.csv
+
+  # Data -------------------------------------------------
+  vol:
+    command: readFile('data/vol_2015_12_17.csv')
+  
+  ast:
+    command: readFile('data/airSat_2015_12_17.csv')
+  
+  spid:
+    command: readFile('data/speciesID.csv')
+
+  fieldFlow:
+    command: readFile('data/fieldOxygenFlow.csv')
+
+  o2tab:
+    command: cleanData(vol, ast, spid)
+  
+  # Analyses -------------------------------------------------
+  michaelisMentenFit:
+    command: fitMichaelisMentenInJAGS(o2tab, modelFile = I('michaelisMenten.bug'))
+
+  mcmcAnova:
+    command: extractMcmcAnova(o2tab, michaelisMentenFit)
+  
+  cpo2sFlat:
+    command: getAvCpo2sFlat(michaelisMentenFit)
+
+  # Tables -------------------------------------------------
+  output/tables/table1.csv:
+    command: makeTable1(dest = target_name, o2tab = o2tab)
+
+  output/tables/table2.csv:
+    command: makeTable2(dest = target_name, fieldFlow = fieldFlow)
+
+  # Figures -------------------------------------------------
+  output/figures/fig1.pdf:
+    command: fig1(o2tab, michaelisMentenFit)
+    plot: fig1Size
+  output/figures/fig2.pdf:
+    command: fig2(michaelisMentenFit, mcmcAnova)
+    plot: fig2Size
+  output/figures/fig3.pdf:
+    command: fig3(fieldFlow, o2tab, michaelisMentenFit)
+    plot: fig3Size
