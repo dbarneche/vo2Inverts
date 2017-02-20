@@ -3,3 +3,4 @@ output/
 *.RData
 library.bib
 *tmp_*
+.remake/
